@@ -1,2 +1,1 @@
-testing here
-coolbeans
+This is a master specific message
