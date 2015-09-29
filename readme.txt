@@ -1,1 +1,1 @@
-this is a new branch, test12
+a journey of 1000 lines of code begins with a single 'git commit'
