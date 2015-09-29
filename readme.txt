@@ -1,1 +1,1 @@
-test
+git is fucking awesome
