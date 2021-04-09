@@ -1,0 +1,1020 @@
+2021-04-02 21:53:43,867 - __main__ - DEBUG - yotube-dl_daemon dependency importDuration=0.65s
+2021-04-02 21:55:28,260 - __main__ - DEBUG - yotube-dl_daemon dependency import time was 0.68s
+2021-04-02 21:55:35,851 - __main__ - DEBUG - yotube-dl_daemon dependency import time was 0.70s
+2021-04-02 21:55:35,862 - __main__ - DEBUG - {'logdir': None, 'x': False}
+yotube-dl_daemon time to start was 0.64s
+[youtube:tab] KingCobraJFS: Downloading webpage
+[download] Downloading playlist: KingCobraJFS - Home
+[youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+[download] Downloading video 1 of 1
+[youtube:tab] KingCobraJFS: Downloading webpage
+[download] Downloading playlist: KingCobraJFS - Videos
+[youtube:tab] Downloading page 1
+[youtube:tab] Downloading page 2
+[youtube:tab] Downloading page 3
+[youtube:tab] Downloading page 4
+[youtube:tab] Downloading page 5
+[youtube:tab] Downloading page 6
+[youtube:tab] Downloading page 7
+[youtube:tab] Downloading page 8
+[youtube:tab] Downloading page 9
+[youtube:tab] Downloading page 10
+[youtube:tab] Downloading page 11
+[youtube:tab] Downloading page 12
+[youtube:tab] Downloading page 13
+[youtube:tab] Downloading page 14
+[youtube:tab] Downloading page 15
+[youtube:tab] Downloading page 16
+[youtube:tab] Downloading page 17
+[youtube:tab] Downloading page 18
+[youtube:tab] Downloading page 19
+[youtube:tab] Downloading page 20
+[youtube:tab] Downloading page 21
+[youtube:tab] Downloading page 22
+[youtube:tab] Downloading page 23
+[youtube:tab] Downloading page 24
+[youtube:tab] Downloading page 25
+[youtube:tab] Downloading page 26
+[youtube:tab] Downloading page 27
+[youtube:tab] Downloading page 28
+[youtube:tab] Downloading page 29
+[youtube:tab] Downloading page 30
+[youtube:tab] Downloading page 31
+[youtube:tab] Downloading page 32
+[youtube:tab] Downloading page 33
+[youtube:tab] Downloading page 34
+[youtube:tab] Downloading page 35
+[youtube:tab] Downloading page 36
+[youtube:tab] Downloading page 37
+[youtube:tab] Downloading page 38
+[youtube:tab] Downloading page 39
+[youtube:tab] Downloading page 40
+[youtube:tab] Downloading page 41
+[youtube:tab] Downloading page 42
+[youtube:tab] Downloading page 43
+[youtube:tab] Downloading page 44
+[youtube:tab] Downloading page 45
+[youtube:tab] Downloading page 46
+[youtube:tab] Downloading page 47
+[youtube:tab] Downloading page 48
+[youtube:tab] Downloading page 49
+[youtube:tab] Downloading page 50
+[youtube:tab] Downloading page 51
+[youtube:tab] Downloading page 52
+[youtube:tab] Downloading page 53
+[youtube:tab] Downloading page 54
+[youtube:tab] Downloading page 55
+[youtube:tab] Downloading page 56
+[youtube:tab] Downloading page 57
+[youtube:tab] Downloading page 58
+[youtube:tab] Downloading page 59
+[youtube:tab] Downloading page 60
+[youtube:tab] Downloading page 61
+[youtube:tab] Downloading page 62
+[youtube:tab] Downloading page 63
+[youtube:tab] playlist KingCobraJFS - Videos: Downloading 1910 videos
+[download] Downloading video 1 of 1910
+ERROR: [WinError 6] The handle is invalid
+[download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:06:05,742 - __main__ - DEBUG - yotube-dl_daemon time to start was 0.66s
+2021-04-02 23:06:06,391 - __main__ - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:06:06,687 - __main__ - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:06:06,694 - __main__ - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:06:06,700 - __main__ - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:06:06,709 - __main__ - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:06:06,997 - __main__ - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:06:07,004 - __main__ - DEBUG - [youtube:tab] Downloading page 1
+2021-04-02 23:06:07,262 - __main__ - DEBUG - [youtube:tab] Downloading page 2
+2021-04-02 23:06:07,527 - __main__ - DEBUG - [youtube:tab] Downloading page 3
+2021-04-02 23:06:07,788 - __main__ - DEBUG - [youtube:tab] Downloading page 4
+2021-04-02 23:06:08,052 - __main__ - DEBUG - [youtube:tab] Downloading page 5
+2021-04-02 23:06:08,306 - __main__ - DEBUG - [youtube:tab] Downloading page 6
+2021-04-02 23:06:08,562 - __main__ - DEBUG - [youtube:tab] Downloading page 7
+2021-04-02 23:06:08,825 - __main__ - DEBUG - [youtube:tab] Downloading page 8
+2021-04-02 23:06:09,101 - __main__ - DEBUG - [youtube:tab] Downloading page 9
+2021-04-02 23:06:09,375 - __main__ - DEBUG - [youtube:tab] Downloading page 10
+2021-04-02 23:06:09,645 - __main__ - DEBUG - [youtube:tab] Downloading page 11
+2021-04-02 23:06:09,918 - __main__ - DEBUG - [youtube:tab] Downloading page 12
+2021-04-02 23:06:10,168 - __main__ - DEBUG - [youtube:tab] Downloading page 13
+2021-04-02 23:06:10,434 - __main__ - DEBUG - [youtube:tab] Downloading page 14
+2021-04-02 23:06:10,703 - __main__ - DEBUG - [youtube:tab] Downloading page 15
+2021-04-02 23:06:10,970 - __main__ - DEBUG - [youtube:tab] Downloading page 16
+2021-04-02 23:06:11,253 - __main__ - DEBUG - [youtube:tab] Downloading page 17
+2021-04-02 23:06:11,520 - __main__ - DEBUG - [youtube:tab] Downloading page 18
+2021-04-02 23:06:11,800 - __main__ - DEBUG - [youtube:tab] Downloading page 19
+2021-04-02 23:06:12,070 - __main__ - DEBUG - [youtube:tab] Downloading page 20
+2021-04-02 23:06:12,336 - __main__ - DEBUG - [youtube:tab] Downloading page 21
+2021-04-02 23:06:12,604 - __main__ - DEBUG - [youtube:tab] Downloading page 22
+2021-04-02 23:06:12,917 - __main__ - DEBUG - [youtube:tab] Downloading page 23
+2021-04-02 23:06:13,206 - __main__ - DEBUG - [youtube:tab] Downloading page 24
+2021-04-02 23:06:13,494 - __main__ - DEBUG - [youtube:tab] Downloading page 25
+2021-04-02 23:06:13,802 - __main__ - DEBUG - [youtube:tab] Downloading page 26
+2021-04-02 23:06:14,064 - __main__ - DEBUG - [youtube:tab] Downloading page 27
+2021-04-02 23:06:14,332 - __main__ - DEBUG - [youtube:tab] Downloading page 28
+2021-04-02 23:06:14,622 - __main__ - DEBUG - [youtube:tab] Downloading page 29
+2021-04-02 23:06:14,897 - __main__ - DEBUG - [youtube:tab] Downloading page 30
+2021-04-02 23:06:15,193 - __main__ - DEBUG - [youtube:tab] Downloading page 31
+2021-04-02 23:06:15,511 - __main__ - DEBUG - [youtube:tab] Downloading page 32
+2021-04-02 23:06:15,777 - __main__ - DEBUG - [youtube:tab] Downloading page 33
+2021-04-02 23:06:16,045 - __main__ - DEBUG - [youtube:tab] Downloading page 34
+2021-04-02 23:06:16,359 - __main__ - DEBUG - [youtube:tab] Downloading page 35
+2021-04-02 23:06:16,687 - __main__ - DEBUG - [youtube:tab] Downloading page 36
+2021-04-02 23:06:16,953 - __main__ - DEBUG - [youtube:tab] Downloading page 37
+2021-04-02 23:06:17,222 - __main__ - DEBUG - [youtube:tab] Downloading page 38
+2021-04-02 23:06:17,504 - __main__ - DEBUG - [youtube:tab] Downloading page 39
+2021-04-02 23:06:17,783 - __main__ - DEBUG - [youtube:tab] Downloading page 40
+2021-04-02 23:06:18,060 - __main__ - DEBUG - [youtube:tab] Downloading page 41
+2021-04-02 23:06:18,333 - __main__ - DEBUG - [youtube:tab] Downloading page 42
+2021-04-02 23:06:18,614 - __main__ - DEBUG - [youtube:tab] Downloading page 43
+2021-04-02 23:06:18,887 - __main__ - DEBUG - [youtube:tab] Downloading page 44
+2021-04-02 23:06:19,163 - __main__ - DEBUG - [youtube:tab] Downloading page 45
+2021-04-02 23:06:19,498 - __main__ - DEBUG - [youtube:tab] Downloading page 46
+2021-04-02 23:06:19,774 - __main__ - DEBUG - [youtube:tab] Downloading page 47
+2021-04-02 23:06:20,042 - __main__ - DEBUG - [youtube:tab] Downloading page 48
+2021-04-02 23:06:20,320 - __main__ - DEBUG - [youtube:tab] Downloading page 49
+2021-04-02 23:06:20,650 - __main__ - DEBUG - [youtube:tab] Downloading page 50
+2021-04-02 23:06:20,916 - __main__ - DEBUG - [youtube:tab] Downloading page 51
+2021-04-02 23:06:21,197 - __main__ - DEBUG - [youtube:tab] Downloading page 52
+2021-04-02 23:06:21,453 - __main__ - DEBUG - [youtube:tab] Downloading page 53
+2021-04-02 23:06:21,715 - __main__ - DEBUG - [youtube:tab] Downloading page 54
+2021-04-02 23:06:21,988 - __main__ - DEBUG - [youtube:tab] Downloading page 55
+2021-04-02 23:06:22,252 - __main__ - DEBUG - [youtube:tab] Downloading page 56
+2021-04-02 23:06:22,529 - __main__ - DEBUG - [youtube:tab] Downloading page 57
+2021-04-02 23:06:22,815 - __main__ - DEBUG - [youtube:tab] Downloading page 58
+2021-04-02 23:06:23,132 - __main__ - DEBUG - [youtube:tab] Downloading page 59
+2021-04-02 23:06:23,399 - __main__ - DEBUG - [youtube:tab] Downloading page 60
+2021-04-02 23:06:23,697 - __main__ - DEBUG - [youtube:tab] Downloading page 61
+2021-04-02 23:06:23,972 - __main__ - DEBUG - [youtube:tab] Downloading page 62
+2021-04-02 23:06:24,242 - __main__ - DEBUG - [youtube:tab] Downloading page 63
+2021-04-02 23:06:24,521 - __main__ - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 1910 videos
+2021-04-02 23:06:24,530 - __main__ - DEBUG - [download] Downloading video 1 of 1910
+2021-04-02 23:06:24,541 - __main__ - ERROR - ERROR: [WinError 6] The handle is invalid
+2021-04-02 23:06:24,550 - __main__ - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:06:27,429 - DEBUG - yotube-dl_daemon time to start was 0.64s
+2021-04-02 23:06:27,987 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:06:28,355 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:06:28,414 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:06:28,422 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:06:28,433 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:06:28,759 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:06:28,818 - DEBUG - [youtube:tab] Downloading page 1
+2021-04-02 23:07:33,444 - DEBUG - yotube-dl_daemon time to start was 0.71s
+2021-04-02 23:07:34,076 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:07:34,361 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:07:34,370 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:07:34,379 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:07:34,390 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:07:34,689 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:07:34,699 - DEBUG - [youtube:tab] Downloading page 1
+2021-04-02 23:07:34,964 - DEBUG - [youtube:tab] Downloading page 2
+2021-04-02 23:07:35,217 - DEBUG - [youtube:tab] Downloading page 3
+2021-04-02 23:07:35,478 - DEBUG - [youtube:tab] Downloading page 4
+2021-04-02 23:07:35,750 - DEBUG - [youtube:tab] Downloading page 5
+2021-04-02 23:07:36,041 - DEBUG - [youtube:tab] Downloading page 6
+2021-04-02 23:07:59,831 - DEBUG - yotube-dl_daemon time to start was 0.65s
+2021-04-02 23:08:00,333 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:08:07,417 - DEBUG - yotube-dl_daemon time to start was 0.69s
+2021-04-02 23:08:08,113 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:08:08,403 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:08:08,410 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:08:08,415 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:08:08,424 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:08:08,721 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:08:08,754 - DEBUG - [youtube:tab] Downloading page 1
+2021-04-02 23:08:09,041 - DEBUG - [youtube:tab] Downloading page 2
+2021-04-02 23:08:09,314 - DEBUG - [youtube:tab] Downloading page 3
+2021-04-02 23:08:09,606 - DEBUG - [youtube:tab] Downloading page 4
+2021-04-02 23:08:09,889 - DEBUG - [youtube:tab] Downloading page 5
+2021-04-02 23:08:10,153 - DEBUG - [youtube:tab] Downloading page 6
+2021-04-02 23:08:10,449 - DEBUG - [youtube:tab] Downloading page 7
+2021-04-02 23:08:10,705 - DEBUG - [youtube:tab] Downloading page 8
+2021-04-02 23:08:10,965 - DEBUG - [youtube:tab] Downloading page 9
+2021-04-02 23:08:11,268 - DEBUG - [youtube:tab] Downloading page 10
+2021-04-02 23:08:11,536 - DEBUG - [youtube:tab] Downloading page 11
+2021-04-02 23:08:11,831 - DEBUG - [youtube:tab] Downloading page 12
+2021-04-02 23:08:12,097 - DEBUG - [youtube:tab] Downloading page 13
+2021-04-02 23:08:12,371 - DEBUG - [youtube:tab] Downloading page 14
+2021-04-02 23:08:12,655 - DEBUG - [youtube:tab] Downloading page 15
+2021-04-02 23:08:12,930 - DEBUG - [youtube:tab] Downloading page 16
+2021-04-02 23:08:13,201 - DEBUG - [youtube:tab] Downloading page 17
+2021-04-02 23:08:13,465 - DEBUG - [youtube:tab] Downloading page 18
+2021-04-02 23:08:13,732 - DEBUG - [youtube:tab] Downloading page 19
+2021-04-02 23:08:14,025 - DEBUG - [youtube:tab] Downloading page 20
+2021-04-02 23:08:14,389 - DEBUG - [youtube:tab] Downloading page 21
+2021-04-02 23:08:14,719 - DEBUG - [youtube:tab] Downloading page 22
+2021-04-02 23:08:15,006 - DEBUG - [youtube:tab] Downloading page 23
+2021-04-02 23:08:15,317 - DEBUG - [youtube:tab] Downloading page 24
+2021-04-02 23:08:15,604 - DEBUG - [youtube:tab] Downloading page 25
+2021-04-02 23:08:15,854 - DEBUG - [youtube:tab] Downloading page 26
+2021-04-02 23:08:16,131 - DEBUG - [youtube:tab] Downloading page 27
+2021-04-02 23:08:16,404 - DEBUG - [youtube:tab] Downloading page 28
+2021-04-02 23:08:16,699 - DEBUG - [youtube:tab] Downloading page 29
+2021-04-02 23:08:16,962 - DEBUG - [youtube:tab] Downloading page 30
+2021-04-02 23:08:17,261 - DEBUG - [youtube:tab] Downloading page 31
+2021-04-02 23:08:17,554 - DEBUG - [youtube:tab] Downloading page 32
+2021-04-02 23:08:17,814 - DEBUG - [youtube:tab] Downloading page 33
+2021-04-02 23:08:18,083 - DEBUG - [youtube:tab] Downloading page 34
+2021-04-02 23:08:18,354 - DEBUG - [youtube:tab] Downloading page 35
+2021-04-02 23:08:18,617 - DEBUG - [youtube:tab] Downloading page 36
+2021-04-02 23:08:18,889 - DEBUG - [youtube:tab] Downloading page 37
+2021-04-02 23:08:19,143 - DEBUG - [youtube:tab] Downloading page 38
+2021-04-02 23:08:19,429 - DEBUG - [youtube:tab] Downloading page 39
+2021-04-02 23:08:19,699 - DEBUG - [youtube:tab] Downloading page 40
+2021-04-02 23:08:19,976 - DEBUG - [youtube:tab] Downloading page 41
+2021-04-02 23:08:20,246 - DEBUG - [youtube:tab] Downloading page 42
+2021-04-02 23:08:20,517 - DEBUG - [youtube:tab] Downloading page 43
+2021-04-02 23:08:20,789 - DEBUG - [youtube:tab] Downloading page 44
+2021-04-02 23:08:21,058 - DEBUG - [youtube:tab] Downloading page 45
+2021-04-02 23:08:21,329 - DEBUG - [youtube:tab] Downloading page 46
+2021-04-02 23:08:21,621 - DEBUG - [youtube:tab] Downloading page 47
+2021-04-02 23:08:21,881 - DEBUG - [youtube:tab] Downloading page 48
+2021-04-02 23:08:22,156 - DEBUG - [youtube:tab] Downloading page 49
+2021-04-02 23:08:22,451 - DEBUG - [youtube:tab] Downloading page 50
+2021-04-02 23:08:22,720 - DEBUG - [youtube:tab] Downloading page 51
+2021-04-02 23:08:22,984 - DEBUG - [youtube:tab] Downloading page 52
+2021-04-02 23:08:23,262 - DEBUG - [youtube:tab] Downloading page 53
+2021-04-02 23:08:23,525 - DEBUG - [youtube:tab] Downloading page 54
+2021-04-02 23:08:23,815 - DEBUG - [youtube:tab] Downloading page 55
+2021-04-02 23:08:24,072 - DEBUG - [youtube:tab] Downloading page 56
+2021-04-02 23:08:24,348 - DEBUG - [youtube:tab] Downloading page 57
+2021-04-02 23:08:24,610 - DEBUG - [youtube:tab] Downloading page 58
+2021-04-02 23:08:24,879 - DEBUG - [youtube:tab] Downloading page 59
+2021-04-02 23:08:25,158 - DEBUG - [youtube:tab] Downloading page 60
+2021-04-02 23:08:25,426 - DEBUG - [youtube:tab] Downloading page 61
+2021-04-02 23:08:25,695 - DEBUG - [youtube:tab] Downloading page 62
+2021-04-02 23:08:25,959 - DEBUG - [youtube:tab] Downloading page 63
+2021-04-02 23:08:26,222 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 1910 videos
+2021-04-02 23:08:26,228 - DEBUG - [download] Downloading video 1 of 1910
+2021-04-02 23:08:26,237 - ERROR - ERROR: [WinError 6] The handle is invalid
+2021-04-02 23:08:26,244 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:08:58,169 - DEBUG - yotube-dl_daemon time to start was 0.39s
+2021-04-02 23:08:58,510 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:08:58,736 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:08:58,767 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:08:58,771 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:08:58,776 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:08:59,012 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:08:59,021 - DEBUG - [youtube:tab] Downloading page 1
+2021-04-02 23:08:59,336 - DEBUG - [youtube:tab] Downloading page 2
+2021-04-02 23:08:59,594 - DEBUG - [youtube:tab] Downloading page 3
+2021-04-02 23:08:59,878 - DEBUG - [youtube:tab] Downloading page 4
+2021-04-02 23:09:00,094 - DEBUG - [youtube:tab] Downloading page 5
+2021-04-02 23:09:00,304 - DEBUG - [youtube:tab] Downloading page 6
+2021-04-02 23:09:00,545 - DEBUG - [youtube:tab] Downloading page 7
+2021-04-02 23:09:00,792 - DEBUG - [youtube:tab] Downloading page 8
+2021-04-02 23:09:01,046 - DEBUG - [youtube:tab] Downloading page 9
+2021-04-02 23:09:01,342 - DEBUG - [youtube:tab] Downloading page 10
+2021-04-02 23:09:01,557 - DEBUG - [youtube:tab] Downloading page 11
+2021-04-02 23:09:01,816 - DEBUG - [youtube:tab] Downloading page 12
+2021-04-02 23:09:02,055 - DEBUG - [youtube:tab] Downloading page 13
+2021-04-02 23:09:02,331 - DEBUG - [youtube:tab] Downloading page 14
+2021-04-02 23:09:02,546 - DEBUG - [youtube:tab] Downloading page 15
+2021-04-02 23:09:02,749 - DEBUG - [youtube:tab] Downloading page 16
+2021-04-02 23:09:03,003 - DEBUG - [youtube:tab] Downloading page 17
+2021-04-02 23:09:03,270 - DEBUG - [youtube:tab] Downloading page 18
+2021-04-02 23:09:03,490 - DEBUG - [youtube:tab] Downloading page 19
+2021-04-02 23:09:03,747 - DEBUG - [youtube:tab] Downloading page 20
+2021-04-02 23:09:03,971 - DEBUG - [youtube:tab] Downloading page 21
+2021-04-02 23:09:04,257 - DEBUG - [youtube:tab] Downloading page 22
+2021-04-02 23:09:04,479 - DEBUG - [youtube:tab] Downloading page 23
+2021-04-02 23:09:04,725 - DEBUG - [youtube:tab] Downloading page 24
+2021-04-02 23:09:04,939 - DEBUG - [youtube:tab] Downloading page 25
+2021-04-02 23:09:05,182 - DEBUG - [youtube:tab] Downloading page 26
+2021-04-02 23:09:05,446 - DEBUG - [youtube:tab] Downloading page 27
+2021-04-02 23:09:05,676 - DEBUG - [youtube:tab] Downloading page 28
+2021-04-02 23:09:05,978 - DEBUG - [youtube:tab] Downloading page 29
+2021-04-02 23:09:06,264 - DEBUG - [youtube:tab] Downloading page 30
+2021-04-02 23:09:06,487 - DEBUG - [youtube:tab] Downloading page 31
+2021-04-02 23:09:06,696 - DEBUG - [youtube:tab] Downloading page 32
+2021-04-02 23:09:06,936 - DEBUG - [youtube:tab] Downloading page 33
+2021-04-02 23:09:07,201 - DEBUG - [youtube:tab] Downloading page 34
+2021-04-02 23:09:07,446 - DEBUG - [youtube:tab] Downloading page 35
+2021-04-02 23:09:07,671 - DEBUG - [youtube:tab] Downloading page 36
+2021-04-02 23:09:07,899 - DEBUG - [youtube:tab] Downloading page 37
+2021-04-02 23:09:08,146 - DEBUG - [youtube:tab] Downloading page 38
+2021-04-02 23:09:08,377 - DEBUG - [youtube:tab] Downloading page 39
+2021-04-02 23:09:08,633 - DEBUG - [youtube:tab] Downloading page 40
+2021-04-02 23:09:08,851 - DEBUG - [youtube:tab] Downloading page 41
+2021-04-02 23:09:09,109 - DEBUG - [youtube:tab] Downloading page 42
+2021-04-02 23:09:09,338 - DEBUG - [youtube:tab] Downloading page 43
+2021-04-02 23:09:09,590 - DEBUG - [youtube:tab] Downloading page 44
+2021-04-02 23:09:09,831 - DEBUG - [youtube:tab] Downloading page 45
+2021-04-02 23:09:10,094 - DEBUG - [youtube:tab] Downloading page 46
+2021-04-02 23:09:10,340 - DEBUG - [youtube:tab] Downloading page 47
+2021-04-02 23:09:10,582 - DEBUG - [youtube:tab] Downloading page 48
+2021-04-02 23:09:10,852 - DEBUG - [youtube:tab] Downloading page 49
+2021-04-02 23:09:11,086 - DEBUG - [youtube:tab] Downloading page 50
+2021-04-02 23:09:11,334 - DEBUG - [youtube:tab] Downloading page 51
+2021-04-02 23:09:11,591 - DEBUG - [youtube:tab] Downloading page 52
+2021-04-02 23:09:11,836 - DEBUG - [youtube:tab] Downloading page 53
+2021-04-02 23:09:12,081 - DEBUG - [youtube:tab] Downloading page 54
+2021-04-02 23:09:12,344 - DEBUG - [youtube:tab] Downloading page 55
+2021-04-02 23:09:12,557 - DEBUG - [youtube:tab] Downloading page 56
+2021-04-02 23:09:12,785 - DEBUG - [youtube:tab] Downloading page 57
+2021-04-02 23:09:13,008 - DEBUG - [youtube:tab] Downloading page 58
+2021-04-02 23:09:13,302 - DEBUG - [youtube:tab] Downloading page 59
+2021-04-02 23:09:13,519 - DEBUG - [youtube:tab] Downloading page 60
+2021-04-02 23:09:13,780 - DEBUG - [youtube:tab] Downloading page 61
+2021-04-02 23:09:14,043 - DEBUG - [youtube:tab] Downloading page 62
+2021-04-02 23:09:14,276 - DEBUG - [youtube:tab] Downloading page 63
+2021-04-02 23:09:14,479 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 1910 videos
+2021-04-02 23:09:14,528 - DEBUG - [download] Downloading video 1 of 1910
+2021-04-02 23:09:14,532 - ERROR - ERROR: [WinError 6] The handle is invalid
+2021-04-02 23:09:14,536 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:10:44,529 - DEBUG - yotube-dl_daemon time to start was 0.39s
+2021-04-02 23:10:44,852 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:10:45,136 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:10:45,140 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:10:45,144 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:10:45,149 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:10:45,386 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:10:45,394 - DEBUG - [youtube:tab] Downloading page 1
+2021-04-02 23:10:45,594 - DEBUG - [youtube:tab] Downloading page 2
+2021-04-02 23:10:45,902 - DEBUG - [youtube:tab] Downloading page 3
+2021-04-02 23:10:46,117 - DEBUG - [youtube:tab] Downloading page 4
+2021-04-02 23:10:46,368 - DEBUG - [youtube:tab] Downloading page 5
+2021-04-02 23:10:46,582 - DEBUG - [youtube:tab] Downloading page 6
+2021-04-02 23:10:46,837 - DEBUG - [youtube:tab] Downloading page 7
+2021-04-02 23:10:47,055 - DEBUG - [youtube:tab] Downloading page 8
+2021-04-02 23:10:47,280 - DEBUG - [youtube:tab] Downloading page 9
+2021-04-02 23:10:47,514 - DEBUG - [youtube:tab] Downloading page 10
+2021-04-02 23:10:47,736 - DEBUG - [youtube:tab] Downloading page 11
+2021-04-02 23:10:47,979 - DEBUG - [youtube:tab] Downloading page 12
+2021-04-02 23:10:48,244 - DEBUG - [youtube:tab] Downloading page 13
+2021-04-02 23:10:48,485 - DEBUG - [youtube:tab] Downloading page 14
+2021-04-02 23:10:48,746 - DEBUG - [youtube:tab] Downloading page 15
+2021-04-02 23:10:48,994 - DEBUG - [youtube:tab] Downloading page 16
+2021-04-02 23:10:49,208 - DEBUG - [youtube:tab] Downloading page 17
+2021-04-02 23:10:49,445 - DEBUG - [youtube:tab] Downloading page 18
+2021-04-02 23:10:49,665 - DEBUG - [youtube:tab] Downloading page 19
+2021-04-02 23:10:49,930 - DEBUG - [youtube:tab] Downloading page 20
+2021-04-02 23:10:50,183 - DEBUG - [youtube:tab] Downloading page 21
+2021-04-02 23:10:50,432 - DEBUG - [youtube:tab] Downloading page 22
+2021-04-02 23:10:50,640 - DEBUG - [youtube:tab] Downloading page 23
+2021-04-02 23:10:50,864 - DEBUG - [youtube:tab] Downloading page 24
+2021-04-02 23:10:51,124 - DEBUG - [youtube:tab] Downloading page 25
+2021-04-02 23:10:51,325 - DEBUG - [youtube:tab] Downloading page 26
+2021-04-02 23:10:51,558 - DEBUG - [youtube:tab] Downloading page 27
+2021-04-02 23:10:51,795 - DEBUG - [youtube:tab] Downloading page 28
+2021-04-02 23:10:52,050 - DEBUG - [youtube:tab] Downloading page 29
+2021-04-02 23:10:52,300 - DEBUG - [youtube:tab] Downloading page 30
+2021-04-02 23:10:52,548 - DEBUG - [youtube:tab] Downloading page 31
+2021-04-02 23:10:52,798 - DEBUG - [youtube:tab] Downloading page 32
+2021-04-02 23:10:53,063 - DEBUG - [youtube:tab] Downloading page 33
+2021-04-02 23:10:53,304 - DEBUG - [youtube:tab] Downloading page 34
+2021-04-02 23:10:53,561 - DEBUG - [youtube:tab] Downloading page 35
+2021-04-02 23:10:53,814 - DEBUG - [youtube:tab] Downloading page 36
+2021-04-02 23:10:54,076 - DEBUG - [youtube:tab] Downloading page 37
+2021-04-02 23:10:54,319 - DEBUG - [youtube:tab] Downloading page 38
+2021-04-02 23:10:54,551 - DEBUG - [youtube:tab] Downloading page 39
+2021-04-02 23:10:54,806 - DEBUG - [youtube:tab] Downloading page 40
+2021-04-02 23:10:55,056 - DEBUG - [youtube:tab] Downloading page 41
+2021-04-02 23:10:55,318 - DEBUG - [youtube:tab] Downloading page 42
+2021-04-02 23:10:55,561 - DEBUG - [youtube:tab] Downloading page 43
+2021-04-02 23:10:55,830 - DEBUG - [youtube:tab] Downloading page 44
+2021-04-02 23:10:56,052 - DEBUG - [youtube:tab] Downloading page 45
+2021-04-02 23:10:56,282 - DEBUG - [youtube:tab] Downloading page 46
+2021-04-02 23:10:56,512 - DEBUG - [youtube:tab] Downloading page 47
+2021-04-02 23:10:56,733 - DEBUG - [youtube:tab] Downloading page 48
+2021-04-02 23:10:56,983 - DEBUG - [youtube:tab] Downloading page 49
+2021-04-02 23:10:57,255 - DEBUG - [youtube:tab] Downloading page 50
+2021-04-02 23:10:57,454 - DEBUG - [youtube:tab] Downloading page 51
+2021-04-02 23:10:57,730 - DEBUG - [youtube:tab] Downloading page 52
+2021-04-02 23:10:57,974 - DEBUG - [youtube:tab] Downloading page 53
+2021-04-02 23:10:58,209 - DEBUG - [youtube:tab] Downloading page 54
+2021-04-02 23:10:58,433 - DEBUG - [youtube:tab] Downloading page 55
+2021-04-02 23:10:58,670 - DEBUG - [youtube:tab] Downloading page 56
+2021-04-02 23:10:58,945 - DEBUG - [youtube:tab] Downloading page 57
+2021-04-02 23:10:59,166 - DEBUG - [youtube:tab] Downloading page 58
+2021-04-02 23:10:59,413 - DEBUG - [youtube:tab] Downloading page 59
+2021-04-02 23:10:59,669 - DEBUG - [youtube:tab] Downloading page 60
+2021-04-02 23:10:59,874 - DEBUG - [youtube:tab] Downloading page 61
+2021-04-02 23:11:00,117 - DEBUG - [youtube:tab] Downloading page 62
+2021-04-02 23:11:00,370 - DEBUG - [youtube:tab] Downloading page 63
+2021-04-02 23:11:00,572 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 1910 videos
+2021-04-02 23:11:00,634 - DEBUG - [download] Downloading video 1 of 1910
+2021-04-02 23:11:00,638 - ERROR - ERROR: [WinError 6] The handle is invalid
+2021-04-02 23:11:00,641 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:11:35,438 - DEBUG - yotube-dl_daemon time to start was 4.89s
+2021-04-02 23:11:35,791 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:11:36,077 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:11:36,114 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:11:36,118 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:11:36,122 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:11:36,341 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:11:36,383 - DEBUG - [youtube:tab] Downloading page 1
+2021-04-02 23:11:36,604 - DEBUG - [youtube:tab] Downloading page 2
+2021-04-02 23:11:36,835 - DEBUG - [youtube:tab] Downloading page 3
+2021-04-02 23:11:37,099 - DEBUG - [youtube:tab] Downloading page 4
+2021-04-02 23:11:37,350 - DEBUG - [youtube:tab] Downloading page 5
+2021-04-02 23:11:37,603 - DEBUG - [youtube:tab] Downloading page 6
+2021-04-02 23:11:37,852 - DEBUG - [youtube:tab] Downloading page 7
+2021-04-02 23:11:38,113 - DEBUG - [youtube:tab] Downloading page 8
+2021-04-02 23:11:38,387 - DEBUG - [youtube:tab] Downloading page 9
+2021-04-02 23:11:38,623 - DEBUG - [youtube:tab] Downloading page 10
+2021-04-02 23:11:38,854 - DEBUG - [youtube:tab] Downloading page 11
+2021-04-02 23:11:39,124 - DEBUG - [youtube:tab] Downloading page 12
+2021-04-02 23:11:39,409 - DEBUG - [youtube:tab] Downloading page 13
+2021-04-02 23:11:39,631 - DEBUG - [youtube:tab] Downloading page 14
+2021-04-02 23:11:39,847 - DEBUG - [youtube:tab] Downloading page 15
+2021-04-02 23:11:40,069 - DEBUG - [youtube:tab] Downloading page 16
+2021-04-02 23:11:40,347 - DEBUG - [youtube:tab] Downloading page 17
+2021-04-02 23:11:40,591 - DEBUG - [youtube:tab] Downloading page 18
+2021-04-02 23:11:40,835 - DEBUG - [youtube:tab] Downloading page 19
+2021-04-02 23:11:41,085 - DEBUG - [youtube:tab] Downloading page 20
+2021-04-02 23:11:41,334 - DEBUG - [youtube:tab] Downloading page 21
+2021-04-02 23:11:41,585 - DEBUG - [youtube:tab] Downloading page 22
+2021-04-02 23:11:41,837 - DEBUG - [youtube:tab] Downloading page 23
+2021-04-02 23:11:42,112 - DEBUG - [youtube:tab] Downloading page 24
+2021-04-02 23:11:42,341 - DEBUG - [youtube:tab] Downloading page 25
+2021-04-02 23:11:42,603 - DEBUG - [youtube:tab] Downloading page 26
+2021-04-02 23:11:42,850 - DEBUG - [youtube:tab] Downloading page 27
+2021-04-02 23:11:43,097 - DEBUG - [youtube:tab] Downloading page 28
+2021-04-02 23:11:43,367 - DEBUG - [youtube:tab] Downloading page 29
+2021-04-02 23:11:43,629 - DEBUG - [youtube:tab] Downloading page 30
+2021-04-02 23:11:43,873 - DEBUG - [youtube:tab] Downloading page 31
+2021-04-02 23:11:44,098 - DEBUG - [youtube:tab] Downloading page 32
+2021-04-02 23:11:44,354 - DEBUG - [youtube:tab] Downloading page 33
+2021-04-02 23:11:44,620 - DEBUG - [youtube:tab] Downloading page 34
+2021-04-02 23:11:44,869 - DEBUG - [youtube:tab] Downloading page 35
+2021-04-02 23:11:45,148 - DEBUG - [youtube:tab] Downloading page 36
+2021-04-02 23:11:45,404 - DEBUG - [youtube:tab] Downloading page 37
+2021-04-02 23:11:45,624 - DEBUG - [youtube:tab] Downloading page 38
+2021-04-02 23:11:45,872 - DEBUG - [youtube:tab] Downloading page 39
+2021-04-02 23:11:46,142 - DEBUG - [youtube:tab] Downloading page 40
+2021-04-02 23:11:46,372 - DEBUG - [youtube:tab] Downloading page 41
+2021-04-02 23:11:46,627 - DEBUG - [youtube:tab] Downloading page 42
+2021-04-02 23:11:46,870 - DEBUG - [youtube:tab] Downloading page 43
+2021-04-02 23:11:47,153 - DEBUG - [youtube:tab] Downloading page 44
+2021-04-02 23:11:47,393 - DEBUG - [youtube:tab] Downloading page 45
+2021-04-02 23:11:47,635 - DEBUG - [youtube:tab] Downloading page 46
+2021-04-02 23:11:47,895 - DEBUG - [youtube:tab] Downloading page 47
+2021-04-02 23:11:48,157 - DEBUG - [youtube:tab] Downloading page 48
+2021-04-02 23:11:48,405 - DEBUG - [youtube:tab] Downloading page 49
+2021-04-02 23:11:48,659 - DEBUG - [youtube:tab] Downloading page 50
+2021-04-02 23:11:48,891 - DEBUG - [youtube:tab] Downloading page 51
+2021-04-02 23:11:49,140 - DEBUG - [youtube:tab] Downloading page 52
+2021-04-02 23:11:49,390 - DEBUG - [youtube:tab] Downloading page 53
+2021-04-02 23:11:49,653 - DEBUG - [youtube:tab] Downloading page 54
+2021-04-02 23:11:49,889 - DEBUG - [youtube:tab] Downloading page 55
+2021-04-02 23:11:50,159 - DEBUG - [youtube:tab] Downloading page 56
+2021-04-02 23:11:50,412 - DEBUG - [youtube:tab] Downloading page 57
+2021-04-02 23:11:50,641 - DEBUG - [youtube:tab] Downloading page 58
+2021-04-02 23:11:50,903 - DEBUG - [youtube:tab] Downloading page 59
+2021-04-02 23:11:51,156 - DEBUG - [youtube:tab] Downloading page 60
+2021-04-02 23:11:51,403 - DEBUG - [youtube:tab] Downloading page 61
+2021-04-02 23:11:51,684 - DEBUG - [youtube:tab] Downloading page 62
+2021-04-02 23:11:51,911 - DEBUG - [youtube:tab] Downloading page 63
+2021-04-02 23:11:52,139 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 1910 videos
+2021-04-02 23:11:52,142 - DEBUG - [download] Downloading video 1 of 1910
+2021-04-02 23:11:52,146 - ERROR - ERROR: [WinError 6] The handle is invalid
+2021-04-02 23:11:52,150 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:12:48,217 - DEBUG - yotube-dl_daemon time to start was 0.39s
+2021-04-02 23:12:52,460 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:12:56,196 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:13:20,403 - DEBUG - yotube-dl_daemon time to start was 0.40s
+2021-04-02 23:13:20,459 - DEBUG - sleeping
+2021-04-02 23:13:31,847 - DEBUG - yotube-dl_daemon time to start was 0.37s
+2021-04-02 23:13:31,861 - DEBUG - sleeping
+2021-04-02 23:13:39,948 - DEBUG - yotube-dl_daemon time to start was 0.37s
+2021-04-02 23:13:40,274 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:13:40,547 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:13:40,561 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:13:40,563 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:13:40,566 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:13:40,823 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:13:40,826 - DEBUG - [youtube:tab] Downloading page 1
+2021-04-02 23:13:41,041 - DEBUG - [youtube:tab] Downloading page 2
+2021-04-02 23:13:41,311 - DEBUG - [youtube:tab] Downloading page 3
+2021-04-02 23:13:41,544 - DEBUG - [youtube:tab] Downloading page 4
+2021-04-02 23:13:41,838 - DEBUG - [youtube:tab] Downloading page 5
+2021-04-02 23:13:42,074 - DEBUG - [youtube:tab] Downloading page 6
+2021-04-02 23:13:42,302 - DEBUG - [youtube:tab] Downloading page 7
+2021-04-02 23:13:42,542 - DEBUG - [youtube:tab] Downloading page 8
+2021-04-02 23:13:42,799 - DEBUG - [youtube:tab] Downloading page 9
+2021-04-02 23:13:51,874 - DEBUG - yotube-dl_daemon time to start was 0.37s
+2021-04-02 23:13:52,206 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:13:52,477 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:13:52,503 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:13:52,506 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:13:52,512 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:13:52,730 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:13:52,769 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 5 videos
+2021-04-02 23:13:52,773 - DEBUG - [download] Downloading video 1 of 5
+2021-04-02 23:13:52,778 - ERROR - ERROR: [WinError 6] The handle is invalid
+2021-04-02 23:13:52,783 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:13:52,786 - DEBUG - sleeping
+2021-04-02 23:14:23,397 - DEBUG - yotube-dl_daemon time to start was 0.36s
+2021-04-02 23:14:23,727 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:14:23,978 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:14:23,995 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:14:23,999 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:14:24,005 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:14:24,247 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:14:24,258 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 5 videos
+2021-04-02 23:14:24,262 - DEBUG - [download] Downloading video 1 of 5
+2021-04-02 23:14:24,266 - DEBUG - [youtube] o5kTkZOY0B8: Downloading webpage
+2021-04-02 23:14:24,601 - DEBUG - [youtube] o5kTkZOY0B8: Downloading MPD manifest
+2021-04-02 23:14:25,226 - DEBUG - [download] Destination: video responce-o5kTkZOY0B8.mp4
+2021-04-02 23:14:25,231 - DEBUG - [download]   0.0% of 359.89MiB at 199.95KiB/s ETA 30:43
+2021-04-02 23:14:25,242 - DEBUG - [download]   0.0% of 359.89MiB at 187.47KiB/s ETA 32:45
+2021-04-02 23:14:25,247 - DEBUG - [download]   0.0% of 359.89MiB at 333.26KiB/s ETA 18:25
+2021-04-02 23:14:25,251 - DEBUG - [download]   0.0% of 359.89MiB at 599.87KiB/s ETA 10:14
+2021-04-02 23:14:25,259 - DEBUG - [download]   0.0% of 359.89MiB at 939.20KiB/s ETA 06:32
+2021-04-02 23:14:25,264 - DEBUG - [download]   0.0% of 359.89MiB at  1.62MiB/s ETA 03:42 
+2021-04-02 23:14:25,278 - DEBUG - [download]   0.0% of 359.89MiB at  2.38MiB/s ETA 02:30 
+2021-04-02 23:14:25,291 - DEBUG - [download]   0.1% of 359.89MiB at  3.83MiB/s ETA 01:33 
+2021-04-02 23:14:25,303 - DEBUG - [download]   0.1% of 359.89MiB at  6.48MiB/s ETA 00:55 
+2021-04-02 23:14:25,321 - DEBUG - [download]   0.3% of 359.89MiB at 10.63MiB/s ETA 00:33 
+2021-04-02 23:14:25,335 - DEBUG - [download]   0.6% of 359.89MiB at 18.34MiB/s ETA 00:19 
+2021-04-02 23:14:25,371 - DEBUG - [download]   1.1% of 359.89MiB at 27.57MiB/s ETA 00:12 
+2021-04-02 23:14:25,423 - DEBUG - [download]   2.2% of 359.89MiB at 40.60MiB/s ETA 00:08 
+2021-04-02 23:14:25,459 - DEBUG - [download]   3.3% of 359.89MiB at 51.49MiB/s ETA 00:06 
+2021-04-02 23:14:25,506 - DEBUG - [download]   4.4% of 359.89MiB at 57.13MiB/s ETA 00:06 
+2021-04-02 23:14:25,543 - DEBUG - [download]   5.6% of 359.89MiB at 63.07MiB/s ETA 00:05 
+2021-04-02 23:14:25,566 - DEBUG - [download]   6.7% of 359.89MiB at 70.57MiB/s ETA 00:04 
+2021-04-02 23:14:25,609 - DEBUG - [download]   7.8% of 359.89MiB at 73.09MiB/s ETA 00:04 
+2021-04-02 23:14:25,638 - DEBUG - [download]   8.9% of 359.89MiB at 77.65MiB/s ETA 00:04 
+2021-04-02 23:14:25,677 - DEBUG - [download]  10.0% of 359.89MiB at 79.80MiB/s ETA 00:04 
+2021-04-02 23:14:25,711 - DEBUG - [download]  11.1% of 359.89MiB at 82.45MiB/s ETA 00:03 
+2021-04-02 23:14:25,747 - DEBUG - [download]  12.2% of 359.89MiB at 84.43MiB/s ETA 00:03 
+2021-04-02 23:14:25,783 - DEBUG - [download]  13.3% of 359.89MiB at 86.15MiB/s ETA 00:03 
+2021-04-02 23:14:25,818 - DEBUG - [download]  14.4% of 359.89MiB at 87.82MiB/s ETA 00:03 
+2021-04-02 23:14:25,876 - DEBUG - [download]  15.6% of 359.89MiB at 86.13MiB/s ETA 00:03 
+2021-04-02 23:14:25,951 - DEBUG - [download]  16.7% of 359.89MiB at 82.74MiB/s ETA 00:03 
+2021-04-02 23:14:25,964 - DEBUG - [download]  17.8% of 359.89MiB at 86.70MiB/s ETA 00:03 
+2021-04-02 23:14:25,977 - DEBUG - [download]  18.9% of 359.89MiB at 90.52MiB/s ETA 00:03 
+2021-04-02 23:14:26,008 - DEBUG - [download]  20.0% of 359.89MiB at 92.29MiB/s ETA 00:03 
+2021-04-02 23:14:26,036 - DEBUG - [download]  21.1% of 359.89MiB at 93.92MiB/s ETA 00:03 
+2021-04-02 23:14:26,074 - DEBUG - [download]  22.2% of 359.89MiB at 94.43MiB/s ETA 00:02 
+2021-04-02 23:14:26,119 - DEBUG - [download]  23.3% of 359.89MiB at 94.15MiB/s ETA 00:02 
+2021-04-02 23:14:26,144 - DEBUG - [download]  24.5% of 359.89MiB at 95.94MiB/s ETA 00:02 
+2021-04-02 23:14:26,180 - DEBUG - [download]  25.6% of 359.89MiB at 96.51MiB/s ETA 00:02 
+2021-04-02 23:14:26,216 - DEBUG - [download]  26.7% of 359.89MiB at 97.04MiB/s ETA 00:02 
+2021-04-02 23:14:26,268 - DEBUG - [download]  27.8% of 359.89MiB at 96.04MiB/s ETA 00:02 
+2021-04-02 23:14:26,287 - DEBUG - [download]  28.9% of 359.89MiB at 98.09MiB/s ETA 00:02 
+2021-04-02 23:14:26,332 - DEBUG - [download]  30.0% of 359.89MiB at 97.71MiB/s ETA 00:02 
+2021-04-02 23:14:26,359 - DEBUG - [download]  31.1% of 359.89MiB at 98.92MiB/s ETA 00:02 
+2021-04-02 23:14:26,399 - DEBUG - [download]  32.2% of 359.89MiB at 98.95MiB/s ETA 00:02 
+2021-04-02 23:14:26,432 - DEBUG - [download]  33.3% of 359.89MiB at 99.56MiB/s ETA 00:02 
+2021-04-02 23:14:26,468 - DEBUG - [download]  34.5% of 359.89MiB at 99.90MiB/s ETA 00:02 
+2021-04-02 23:14:26,509 - DEBUG - [download]  35.6% of 359.89MiB at 99.82MiB/s ETA 00:02 
+2021-04-02 23:14:26,603 - DEBUG - [download]  36.7% of 359.89MiB at 95.91MiB/s ETA 00:02 
+2021-04-02 23:14:26,641 - DEBUG - [download]  37.8% of 359.89MiB at 96.16MiB/s ETA 00:02 
+2021-04-02 23:14:26,677 - DEBUG - [download]  38.9% of 359.89MiB at 96.53MiB/s ETA 00:02 
+2021-04-02 23:14:26,729 - DEBUG - [download]  40.0% of 359.89MiB at 95.85MiB/s ETA 00:02 
+2021-04-02 23:14:26,762 - DEBUG - [download]  41.1% of 359.89MiB at 96.39MiB/s ETA 00:02 
+2021-04-02 23:14:26,809 - DEBUG - [download]  42.2% of 359.89MiB at 96.06MiB/s ETA 00:02 
+2021-04-02 23:14:26,835 - DEBUG - [download]  43.3% of 359.89MiB at 96.99MiB/s ETA 00:02 
+2021-04-02 23:14:26,883 - DEBUG - [download]  44.5% of 359.89MiB at 96.60MiB/s ETA 00:02 
+2021-04-02 23:14:26,907 - DEBUG - [download]  45.6% of 359.89MiB at 97.60MiB/s ETA 00:02 
+2021-04-02 23:14:26,950 - DEBUG - [download]  46.7% of 359.89MiB at 97.48MiB/s ETA 00:01 
+2021-04-02 23:14:26,979 - DEBUG - [download]  47.8% of 359.89MiB at 98.15MiB/s ETA 00:01 
+2021-04-02 23:14:27,016 - DEBUG - [download]  48.9% of 359.89MiB at 98.36MiB/s ETA 00:01 
+2021-04-02 23:14:27,050 - DEBUG - [download]  50.0% of 359.89MiB at 98.72MiB/s ETA 00:01 
+2021-04-02 23:14:27,087 - DEBUG - [download]  51.1% of 359.89MiB at 98.90MiB/s ETA 00:01 
+2021-04-02 23:14:27,122 - DEBUG - [download]  52.2% of 359.89MiB at 99.19MiB/s ETA 00:01 
+2021-04-02 23:14:27,176 - DEBUG - [download]  53.3% of 359.89MiB at 98.49MiB/s ETA 00:01 
+2021-04-02 23:14:27,245 - DEBUG - [download]  54.5% of 359.89MiB at 97.10MiB/s ETA 00:01 
+2021-04-02 23:14:27,313 - DEBUG - [download]  55.6% of 359.89MiB at 95.90MiB/s ETA 00:01 
+2021-04-02 23:14:27,329 - DEBUG - [download]  56.7% of 359.89MiB at 97.03MiB/s ETA 00:01 
+2021-04-02 23:14:27,368 - DEBUG - [download]  57.8% of 359.89MiB at 97.13MiB/s ETA 00:01 
+2021-04-02 23:14:27,401 - DEBUG - [download]  58.9% of 359.89MiB at 97.49MiB/s ETA 00:01 
+2021-04-02 23:14:27,470 - DEBUG - [download]  60.0% of 359.89MiB at 96.28MiB/s ETA 00:01 
+2021-04-02 23:14:27,532 - DEBUG - [download]  61.1% of 359.89MiB at 95.42MiB/s ETA 00:01 
+2021-04-02 23:14:27,609 - DEBUG - [download]  62.2% of 359.89MiB at 94.02MiB/s ETA 00:01 
+2021-04-02 23:14:27,672 - DEBUG - [download]  63.4% of 359.89MiB at 93.23MiB/s ETA 00:01 
+2021-04-02 23:14:27,747 - DEBUG - [download]  64.5% of 359.89MiB at 92.04MiB/s ETA 00:01 
+2021-04-02 23:14:27,813 - DEBUG - [download]  65.6% of 359.89MiB at 91.24MiB/s ETA 00:01 
+2021-04-02 23:14:27,849 - DEBUG - [download]  66.7% of 359.89MiB at 91.51MiB/s ETA 00:01 
+2021-04-02 23:14:27,909 - DEBUG - [download]  67.8% of 359.89MiB at 90.96MiB/s ETA 00:01 
+2021-04-02 23:14:27,984 - DEBUG - [download]  68.9% of 359.89MiB at 89.93MiB/s ETA 00:01 
+2021-04-02 23:14:28,008 - DEBUG - [download]  70.0% of 359.89MiB at 90.59MiB/s ETA 00:01 
+2021-04-02 23:14:28,056 - DEBUG - [download]  71.1% of 359.89MiB at 90.50MiB/s ETA 00:01 
+2021-04-02 23:14:28,068 - DEBUG - [download]  72.2% of 359.89MiB at 91.50MiB/s ETA 00:01 
+2021-04-02 23:14:28,229 - DEBUG - [download]  73.4% of 359.89MiB at 87.92MiB/s ETA 00:01 
+2021-04-02 23:14:28,273 - DEBUG - [download]  74.5% of 359.89MiB at 87.96MiB/s ETA 00:01 
+2021-04-02 23:14:28,464 - DEBUG - [download]  75.6% of 359.89MiB at 84.01MiB/s ETA 00:01 
+2021-04-02 23:14:28,512 - DEBUG - [download]  76.7% of 359.89MiB at 84.00MiB/s ETA 00:00 
+2021-04-02 23:14:28,603 - DEBUG - [download]  77.8% of 359.89MiB at 82.94MiB/s ETA 00:00 
+2021-04-02 23:14:28,684 - DEBUG - [download]  78.9% of 359.89MiB at 82.16MiB/s ETA 00:00 
+2021-04-02 23:14:28,834 - DEBUG - [download]  80.0% of 359.89MiB at 79.83MiB/s ETA 00:00 
+2021-04-02 23:14:28,875 - DEBUG - [download]  81.1% of 359.89MiB at 80.03MiB/s ETA 00:00 
+2021-04-02 23:14:28,923 - DEBUG - [download]  82.2% of 359.89MiB at 80.09MiB/s ETA 00:00 
+2021-04-02 23:14:28,947 - DEBUG - [download]  83.4% of 359.89MiB at 80.63MiB/s ETA 00:00 
+2021-04-02 23:14:28,983 - DEBUG - [download]  84.5% of 359.89MiB at 80.94MiB/s ETA 00:00 
+2021-04-02 23:14:29,235 - DEBUG - [download]  85.6% of 359.89MiB at 76.83MiB/s ETA 00:00 
+2021-04-02 23:14:29,274 - DEBUG - [download]  86.7% of 359.89MiB at 77.08MiB/s ETA 00:00 
+2021-04-02 23:14:29,311 - DEBUG - [download]  87.8% of 359.89MiB at 77.36MiB/s ETA 00:00 
+2021-04-02 23:14:29,347 - DEBUG - [download]  88.9% of 359.89MiB at 77.65MiB/s ETA 00:00 
+2021-04-02 23:14:29,612 - DEBUG - [download]  90.0% of 359.89MiB at 73.87MiB/s ETA 00:00 
+2021-04-02 23:14:29,658 - DEBUG - [download]  91.1% of 359.89MiB at 74.01MiB/s ETA 00:00 
+2021-04-02 23:14:29,693 - DEBUG - [download]  92.2% of 359.89MiB at 74.32MiB/s ETA 00:00 
+2021-04-02 23:14:29,719 - DEBUG - [download]  93.4% of 359.89MiB at 74.78MiB/s ETA 00:00 
+2021-04-02 23:14:29,761 - DEBUG - [download]  94.5% of 359.89MiB at 74.97MiB/s ETA 00:00 
+2021-04-02 23:14:29,797 - DEBUG - [download]  95.6% of 359.89MiB at 75.26MiB/s ETA 00:00 
+2021-04-02 23:14:29,832 - DEBUG - [download]  96.7% of 359.89MiB at 75.55MiB/s ETA 00:00 
+2021-04-02 23:14:29,889 - DEBUG - [download]  97.8% of 359.89MiB at 75.49MiB/s ETA 00:00 
+2021-04-02 23:14:29,904 - DEBUG - [download]  98.9% of 359.89MiB at 76.12MiB/s ETA 00:00 
+2021-04-02 23:14:29,938 - DEBUG - [download] 100.0% of 359.89MiB at 76.38MiB/s ETA 00:00 
+2021-04-02 23:14:29,945 - DEBUG - [download] 100% of 359.89MiB in 00:04                  
+2021-04-02 23:14:29,959 - DEBUG - [download] Downloading video 2 of 5
+2021-04-02 23:14:29,964 - DEBUG - [youtube] jUxSTFcjoqo: Downloading webpage
+2021-04-02 23:14:30,565 - DEBUG - [download] Destination: noon video-jUxSTFcjoqo.mp4
+2021-04-02 23:14:30,584 - DEBUG - [download]   0.0% of 36.83MiB at 52.62KiB/s ETA 11:56
+2021-04-02 23:14:30,588 - DEBUG - [download]   0.0% of 36.83MiB at 130.41KiB/s ETA 04:49
+2021-04-02 23:14:30,592 - DEBUG - [download]   0.0% of 36.83MiB at 259.20KiB/s ETA 02:25
+2021-04-02 23:14:30,596 - DEBUG - [download]   0.0% of 36.83MiB at 483.76KiB/s ETA 01:17
+2021-04-02 23:14:30,601 - DEBUG - [download]   0.1% of 36.83MiB at 860.89KiB/s ETA 00:43
+2021-04-02 23:14:30,605 - DEBUG - [download]   0.2% of 36.83MiB at  1.54MiB/s ETA 00:23 
+2021-04-02 23:14:30,628 - DEBUG - [download]   0.3% of 36.83MiB at  1.97MiB/s ETA 00:18 
+2021-04-02 23:14:30,660 - DEBUG - [download]   0.7% of 36.83MiB at  2.62MiB/s ETA 00:13 
+2021-04-02 23:14:30,677 - DEBUG - [download]   1.4% of 36.83MiB at  4.45MiB/s ETA 00:08 
+2021-04-02 23:14:30,698 - DEBUG - [download]   2.7% of 36.83MiB at  7.51MiB/s ETA 00:04 
+2021-04-02 23:14:30,711 - DEBUG - [download]   5.4% of 36.83MiB at 13.69MiB/s ETA 00:02 
+2021-04-02 23:14:30,775 - DEBUG - [download]  10.9% of 36.83MiB at 19.04MiB/s ETA 00:01 
+2021-04-02 23:14:30,845 - DEBUG - [download]  21.7% of 36.83MiB at 28.56MiB/s ETA 00:01 
+2021-04-02 23:14:30,894 - DEBUG - [download]  32.6% of 36.83MiB at 36.46MiB/s ETA 00:00 
+2021-04-02 23:14:30,919 - DEBUG - [download]  43.4% of 36.83MiB at 45.18MiB/s ETA 00:00 
+2021-04-02 23:14:30,965 - DEBUG - [download]  54.3% of 36.83MiB at 49.99MiB/s ETA 00:00 
+2021-04-02 23:14:31,000 - DEBUG - [download]  65.2% of 36.83MiB at 55.16MiB/s ETA 00:00 
+2021-04-02 23:14:31,068 - DEBUG - [download]  76.0% of 36.83MiB at 55.65MiB/s ETA 00:00 
+2021-04-02 23:14:31,127 - DEBUG - [download]  86.9% of 36.83MiB at 56.92MiB/s ETA 00:00 
+2021-04-02 23:14:31,150 - DEBUG - [download]  97.7% of 36.83MiB at 61.52MiB/s ETA 00:00 
+2021-04-02 23:14:31,157 - DEBUG - [download] 100.0% of 36.83MiB at 62.20MiB/s ETA 00:00 
+2021-04-02 23:14:31,164 - DEBUG - [download] 100% of 36.83MiB in 00:00                  
+2021-04-02 23:14:31,174 - DEBUG - [download] Downloading video 3 of 5
+2021-04-02 23:14:31,179 - DEBUG - [youtube] RahROj6Qk_E: Downloading webpage
+2021-04-02 23:14:31,740 - DEBUG - [download] Destination: Cool shirt-RahROj6Qk_E.mp4
+2021-04-02 23:14:31,763 - DEBUG - [download]   0.0% of 15.42MiB at 43.47KiB/s ETA 06:03
+2021-04-02 23:14:31,768 - DEBUG - [download]   0.0% of 15.42MiB at 107.12KiB/s ETA 02:27
+2021-04-02 23:14:31,773 - DEBUG - [download]   0.0% of 15.42MiB at 212.07KiB/s ETA 01:14
+2021-04-02 23:14:31,778 - DEBUG - [download]   0.1% of 15.42MiB at 394.65KiB/s ETA 00:39
+2021-04-02 23:14:31,784 - DEBUG - [download]   0.2% of 15.42MiB at 704.39KiB/s ETA 00:22
+2021-04-02 23:14:31,789 - DEBUG - [download]   0.4% of 15.42MiB at  1.26MiB/s ETA 00:12 
+2021-04-02 23:14:31,795 - DEBUG - [download]   0.8% of 15.42MiB at  2.25MiB/s ETA 00:06 
+2021-04-02 23:14:31,800 - DEBUG - [download]   1.6% of 15.42MiB at  4.15MiB/s ETA 00:03 
+2021-04-02 23:14:31,850 - DEBUG - [download]   3.2% of 15.42MiB at  4.54MiB/s ETA 00:03 
+2021-04-02 23:14:31,877 - DEBUG - [download]   6.5% of 15.42MiB at  7.29MiB/s ETA 00:01 
+2021-04-02 23:14:31,895 - DEBUG - [download]  13.0% of 15.42MiB at 12.89MiB/s ETA 00:01 
+2021-04-02 23:14:31,948 - DEBUG - [download]  25.9% of 15.42MiB at 19.22MiB/s ETA 00:00 
+2021-04-02 23:14:32,056 - DEBUG - [download]  51.9% of 15.42MiB at 25.31MiB/s ETA 00:00 
+2021-04-02 23:14:32,140 - DEBUG - [download]  77.8% of 15.42MiB at 29.99MiB/s ETA 00:00 
+2021-04-02 23:14:32,211 - DEBUG - [download] 100.0% of 15.42MiB at 32.74MiB/s ETA 00:00 
+2021-04-02 23:14:32,216 - DEBUG - [download] 100% of 15.42MiB in 00:00                  
+2021-04-02 23:14:32,227 - DEBUG - [download] Downloading video 4 of 5
+2021-04-02 23:14:32,231 - DEBUG - [youtube] ebVjHS7a2bU: Downloading webpage
+2021-04-02 23:14:33,115 - DEBUG - [download] Destination: beer topper-ebVjHS7a2bU.mp4
+2021-04-02 23:14:33,122 - DEBUG - [download]   0.0% of 185.95MiB at 166.62KiB/s ETA 19:02
+2021-04-02 23:14:33,127 - DEBUG - [download]   0.0% of 185.95MiB at 249.95KiB/s ETA 12:41
+2021-04-02 23:14:33,132 - DEBUG - [download]   0.0% of 185.95MiB at 411.68KiB/s ETA 07:42
+2021-04-02 23:14:33,138 - DEBUG - [download]   0.0% of 185.95MiB at 681.69KiB/s ETA 04:39
+2021-04-02 23:14:33,143 - DEBUG - [download]   0.0% of 185.95MiB at  1.08MiB/s ETA 02:52 
+2021-04-02 23:14:33,150 - DEBUG - [download]   0.0% of 185.95MiB at  1.81MiB/s ETA 01:42 
+2021-04-02 23:14:33,155 - DEBUG - [download]   0.1% of 185.95MiB at  3.10MiB/s ETA 00:59 
+2021-04-02 23:14:33,167 - DEBUG - [download]   0.1% of 185.95MiB at  4.79MiB/s ETA 00:38 
+2021-04-02 23:14:33,177 - DEBUG - [download]   0.3% of 185.95MiB at  8.18MiB/s ETA 00:22 
+2021-04-02 23:14:33,195 - DEBUG - [download]   0.5% of 185.95MiB at 12.49MiB/s ETA 00:14 
+2021-04-02 23:14:33,269 - DEBUG - [download]   1.1% of 185.95MiB at 12.98MiB/s ETA 00:14 
+2021-04-02 23:14:33,313 - DEBUG - [download]   2.2% of 185.95MiB at 20.19MiB/s ETA 00:09 
+2021-04-02 23:14:33,436 - DEBUG - [download]   4.3% of 185.95MiB at 24.91MiB/s ETA 00:07 
+2021-04-02 23:14:33,524 - DEBUG - [download]   6.5% of 185.95MiB at 29.33MiB/s ETA 00:05 
+2021-04-02 23:14:33,671 - DEBUG - [download]   8.6% of 185.95MiB at 28.77MiB/s ETA 00:05 
+2021-04-02 23:14:33,743 - DEBUG - [download]  10.8% of 185.95MiB at 31.84MiB/s ETA 00:05 
+2021-04-02 23:14:33,844 - DEBUG - [download]  12.9% of 185.95MiB at 32.91MiB/s ETA 00:04 
+2021-04-02 23:14:33,927 - DEBUG - [download]  15.1% of 185.95MiB at 34.47MiB/s ETA 00:04 
+2021-04-02 23:14:34,163 - DEBUG - [download]  17.2% of 185.95MiB at 30.53MiB/s ETA 00:05 
+2021-04-02 23:14:34,214 - DEBUG - [download]  19.4% of 185.95MiB at 32.75MiB/s ETA 00:04 
+2021-04-02 23:14:34,333 - DEBUG - [download]  21.5% of 185.95MiB at 32.83MiB/s ETA 00:04 
+2021-04-02 23:14:34,401 - DEBUG - [download]  23.7% of 185.95MiB at 34.21MiB/s ETA 00:04 
+2021-04-02 23:14:34,456 - DEBUG - [download]  25.8% of 185.95MiB at 35.79MiB/s ETA 00:03 
+2021-04-02 23:14:34,509 - DEBUG - [download]  28.0% of 185.95MiB at 37.29MiB/s ETA 00:03 
+2021-04-02 23:14:34,575 - DEBUG - [download]  30.1% of 185.95MiB at 38.35MiB/s ETA 00:03 
+2021-04-02 23:14:34,643 - DEBUG - [download]  32.3% of 185.95MiB at 39.26MiB/s ETA 00:03 
+2021-04-02 23:14:34,728 - DEBUG - [download]  34.4% of 185.95MiB at 39.67MiB/s ETA 00:03 
+2021-04-02 23:14:34,781 - DEBUG - [download]  36.6% of 185.95MiB at 40.83MiB/s ETA 00:02 
+2021-04-02 23:14:34,895 - DEBUG - [download]  38.7% of 185.95MiB at 40.46MiB/s ETA 00:02 
+2021-04-02 23:14:34,988 - DEBUG - [download]  40.9% of 185.95MiB at 40.59MiB/s ETA 00:02 
+2021-04-02 23:14:35,084 - DEBUG - [download]  43.0% of 185.95MiB at 40.64MiB/s ETA 00:02 
+2021-04-02 23:14:35,156 - DEBUG - [download]  45.2% of 185.95MiB at 41.17MiB/s ETA 00:02 
+2021-04-02 23:14:35,237 - DEBUG - [download]  47.3% of 185.95MiB at 41.48MiB/s ETA 00:02 
+2021-04-02 23:14:35,435 - DEBUG - [download]  49.5% of 185.95MiB at 39.66MiB/s ETA 00:02 
+2021-04-02 23:14:35,493 - DEBUG - [download]  51.6% of 185.95MiB at 40.38MiB/s ETA 00:02 
+2021-04-02 23:14:35,628 - DEBUG - [download]  53.8% of 185.95MiB at 39.80MiB/s ETA 00:02 
+2021-04-02 23:14:35,673 - DEBUG - [download]  55.9% of 185.95MiB at 40.66MiB/s ETA 00:02 
+2021-04-02 23:14:35,774 - DEBUG - [download]  58.1% of 185.95MiB at 40.62MiB/s ETA 00:01 
+2021-04-02 23:14:35,835 - DEBUG - [download]  60.2% of 185.95MiB at 41.18MiB/s ETA 00:01 
+2021-04-02 23:14:35,876 - DEBUG - [download]  62.4% of 185.95MiB at 42.02MiB/s ETA 00:01 
+2021-04-02 23:14:35,977 - DEBUG - [download]  64.5% of 185.95MiB at 41.93MiB/s ETA 00:01 
+2021-04-02 23:14:36,028 - DEBUG - [download]  66.7% of 185.95MiB at 42.57MiB/s ETA 00:01 
+2021-04-02 23:14:36,142 - DEBUG - [download]  68.8% of 185.95MiB at 42.30MiB/s ETA 00:01 
+2021-04-02 23:14:36,260 - DEBUG - [download]  71.0% of 185.95MiB at 41.97MiB/s ETA 00:01 
+2021-04-02 23:14:36,372 - DEBUG - [download]  73.1% of 185.95MiB at 41.76MiB/s ETA 00:01 
+2021-04-02 23:14:36,431 - DEBUG - [download]  75.3% of 185.95MiB at 42.22MiB/s ETA 00:01 
+2021-04-02 23:14:36,560 - DEBUG - [download]  77.4% of 185.95MiB at 41.80MiB/s ETA 00:01 
+2021-04-02 23:14:36,773 - DEBUG - [download]  79.6% of 185.95MiB at 40.46MiB/s ETA 00:00 
+2021-04-02 23:14:36,847 - DEBUG - [download]  81.7% of 185.95MiB at 40.73MiB/s ETA 00:00 
+2021-04-02 23:14:36,922 - DEBUG - [download]  83.9% of 185.95MiB at 40.99MiB/s ETA 00:00 
+2021-04-02 23:14:36,994 - DEBUG - [download]  86.0% of 185.95MiB at 41.26MiB/s ETA 00:00 
+2021-04-02 23:14:37,051 - DEBUG - [download]  88.2% of 185.95MiB at 41.67MiB/s ETA 00:00 
+2021-04-02 23:14:37,112 - DEBUG - [download]  90.3% of 185.95MiB at 42.03MiB/s ETA 00:00 
+2021-04-02 23:14:37,227 - DEBUG - [download]  92.5% of 185.95MiB at 41.83MiB/s ETA 00:00 
+2021-04-02 23:14:37,282 - DEBUG - [download]  94.7% of 185.95MiB at 42.24MiB/s ETA 00:00 
+2021-04-02 23:14:37,350 - DEBUG - [download]  96.8% of 185.95MiB at 42.50MiB/s ETA 00:00 
+2021-04-02 23:14:37,427 - DEBUG - [download]  99.0% of 185.95MiB at 42.68MiB/s ETA 00:00 
+2021-04-02 23:14:37,440 - DEBUG - [download] 100.0% of 185.95MiB at 42.99MiB/s ETA 00:00 
+2021-04-02 23:14:37,448 - DEBUG - [download] 100% of 185.95MiB in 00:04                  
+2021-04-02 23:14:37,481 - DEBUG - [download] Downloading video 5 of 5
+2021-04-02 23:14:37,486 - DEBUG - [youtube] GQ0oC92ctpk: Downloading webpage
+2021-04-02 23:14:38,230 - DEBUG - [download] Destination: Century eggs-GQ0oC92ctpk.mp4
+2021-04-02 23:14:38,246 - DEBUG - [download]   0.0% of 108.23MiB at 66.65KiB/s ETA 27:42
+2021-04-02 23:14:38,250 - DEBUG - [download]   0.0% of 108.23MiB at 149.97KiB/s ETA 12:18
+2021-04-02 23:14:38,255 - DEBUG - [download]   0.0% of 108.23MiB at 279.94KiB/s ETA 06:35
+2021-04-02 23:14:38,260 - DEBUG - [download]   0.0% of 108.23MiB at 499.89KiB/s ETA 03:41
+2021-04-02 23:14:38,264 - DEBUG - [download]   0.0% of 108.23MiB at 911.49KiB/s ETA 02:01
+2021-04-02 23:14:38,269 - DEBUG - [download]   0.1% of 108.23MiB at  1.58MiB/s ETA 01:08 
+2021-04-02 23:14:38,274 - DEBUG - [download]   0.1% of 108.23MiB at  2.82MiB/s ETA 00:38 
+2021-04-02 23:14:38,279 - DEBUG - [download]   0.2% of 108.23MiB at  5.08MiB/s ETA 00:21 
+2021-04-02 23:14:38,288 - DEBUG - [download]   0.5% of 108.23MiB at  8.60MiB/s ETA 00:12 
+2021-04-02 23:14:38,337 - DEBUG - [download]   0.9% of 108.23MiB at  9.33MiB/s ETA 00:11 
+2021-04-02 23:14:38,353 - DEBUG - [download]   1.8% of 108.23MiB at 16.25MiB/s ETA 00:06 
+2021-04-02 23:14:38,395 - DEBUG - [download]   3.7% of 108.23MiB at 24.23MiB/s ETA 00:04 
+2021-04-02 23:14:38,474 - DEBUG - [download]   7.4% of 108.23MiB at 32.78MiB/s ETA 00:03 
+2021-04-02 23:14:38,538 - DEBUG - [download]  11.1% of 108.23MiB at 38.95MiB/s ETA 00:02 
+2021-04-02 23:14:38,600 - DEBUG - [download]  14.8% of 108.23MiB at 43.23MiB/s ETA 00:02 
+2021-04-02 23:14:38,702 - DEBUG - [download]  18.5% of 108.23MiB at 42.36MiB/s ETA 00:02 
+2021-04-02 23:14:38,791 - DEBUG - [download]  22.2% of 108.23MiB at 42.85MiB/s ETA 00:01 
+2021-04-02 23:14:38,908 - DEBUG - [download]  25.9% of 108.23MiB at 41.29MiB/s ETA 00:01 
+2021-04-02 23:14:38,996 - DEBUG - [download]  29.6% of 108.23MiB at 41.76MiB/s ETA 00:01 
+2021-04-02 23:14:39,060 - DEBUG - [download]  33.3% of 108.23MiB at 43.36MiB/s ETA 00:01 
+2021-04-02 23:14:39,142 - DEBUG - [download]  37.0% of 108.23MiB at 43.90MiB/s ETA 00:01 
+2021-04-02 23:14:39,224 - DEBUG - [download]  40.7% of 108.23MiB at 44.25MiB/s ETA 00:01 
+2021-04-02 23:14:39,382 - DEBUG - [download]  44.4% of 108.23MiB at 41.73MiB/s ETA 00:01 
+2021-04-02 23:14:39,412 - DEBUG - [download]  48.0% of 108.23MiB at 44.02MiB/s ETA 00:01 
+2021-04-02 23:14:39,460 - DEBUG - [download]  51.7% of 108.23MiB at 45.55MiB/s ETA 00:01 
+2021-04-02 23:14:39,621 - DEBUG - [download]  55.4% of 108.23MiB at 43.15MiB/s ETA 00:01 
+2021-04-02 23:14:39,709 - DEBUG - [download]  59.1% of 108.23MiB at 43.29MiB/s ETA 00:01 
+2021-04-02 23:14:39,794 - DEBUG - [download]  62.8% of 108.23MiB at 43.50MiB/s ETA 00:00 
+2021-04-02 23:14:39,837 - DEBUG - [download]  66.5% of 108.23MiB at 44.82MiB/s ETA 00:00 
+2021-04-02 23:14:39,887 - DEBUG - [download]  70.2% of 108.23MiB at 45.88MiB/s ETA 00:00 
+2021-04-02 23:14:40,019 - DEBUG - [download]  73.9% of 108.23MiB at 44.73MiB/s ETA 00:00 
+2021-04-02 23:14:40,160 - DEBUG - [download]  77.6% of 108.23MiB at 43.54MiB/s ETA 00:00 
+2021-04-02 23:14:40,236 - DEBUG - [download]  81.3% of 108.23MiB at 43.88MiB/s ETA 00:00 
+2021-04-02 23:14:40,304 - DEBUG - [download]  85.0% of 108.23MiB at 44.37MiB/s ETA 00:00 
+2021-04-02 23:14:40,426 - DEBUG - [download]  88.7% of 108.23MiB at 43.73MiB/s ETA 00:00 
+2021-04-02 23:14:40,512 - DEBUG - [download]  92.4% of 108.23MiB at 43.85MiB/s ETA 00:00 
+2021-04-02 23:14:40,581 - DEBUG - [download]  96.1% of 108.23MiB at 44.24MiB/s ETA 00:00 
+2021-04-02 23:14:40,719 - DEBUG - [download]  99.8% of 108.23MiB at 43.40MiB/s ETA 00:00 
+2021-04-02 23:14:40,725 - DEBUG - [download] 100.0% of 108.23MiB at 43.39MiB/s ETA 00:00 
+2021-04-02 23:14:40,731 - DEBUG - [download] 100% of 108.23MiB in 00:02                  
+2021-04-02 23:14:40,744 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:14:40,749 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:14:40,755 - DEBUG - sleeping
+2021-04-02 23:15:04,422 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:15:04,743 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:15:05,000 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:15:05,029 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:15:05,030 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:15:05,033 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:15:05,263 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:15:05,265 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 5 videos
+2021-04-02 23:15:05,267 - DEBUG - [download] Downloading video 1 of 5
+2021-04-02 23:15:05,268 - DEBUG - [download] video responce has already been recorded in archive
+2021-04-02 23:15:05,270 - DEBUG - [download] Downloading video 2 of 5
+2021-04-02 23:15:05,271 - DEBUG - [download] noon video has already been recorded in archive
+2021-04-02 23:15:05,272 - DEBUG - [download] Downloading video 3 of 5
+2021-04-02 23:15:05,273 - DEBUG - [download] Cool shirt has already been recorded in archive
+2021-04-02 23:15:05,275 - DEBUG - [download] Downloading video 4 of 5
+2021-04-02 23:15:05,276 - DEBUG - [download] beer topper has already been recorded in archive
+2021-04-02 23:15:05,278 - DEBUG - [download] Downloading video 5 of 5
+2021-04-02 23:15:05,279 - DEBUG - [download] Century eggs has already been recorded in archive
+2021-04-02 23:15:05,280 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:15:05,282 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:15:05,284 - DEBUG - sleeping {kwargs.get('sleep_interval')} seconds
+2021-04-02 23:15:11,233 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:15:11,557 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:15:11,799 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:15:11,849 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:15:11,853 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:15:11,858 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:15:12,120 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:15:12,125 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 5 videos
+2021-04-02 23:15:12,129 - DEBUG - [download] Downloading video 1 of 5
+2021-04-02 23:15:12,133 - DEBUG - [download] video responce has already been recorded in archive
+2021-04-02 23:15:12,137 - DEBUG - [download] Downloading video 2 of 5
+2021-04-02 23:15:12,141 - DEBUG - [download] noon video has already been recorded in archive
+2021-04-02 23:15:12,145 - DEBUG - [download] Downloading video 3 of 5
+2021-04-02 23:15:12,149 - DEBUG - [download] Cool shirt has already been recorded in archive
+2021-04-02 23:15:12,152 - DEBUG - [download] Downloading video 4 of 5
+2021-04-02 23:15:12,156 - DEBUG - [download] beer topper has already been recorded in archive
+2021-04-02 23:15:12,160 - DEBUG - [download] Downloading video 5 of 5
+2021-04-02 23:15:12,164 - DEBUG - [download] Century eggs has already been recorded in archive
+2021-04-02 23:15:12,168 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:15:12,172 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:15:12,176 - DEBUG - sleeping 600 seconds
+2021-04-02 23:16:04,746 - DEBUG - yotube-dl_daemon time to start was 0.39s
+2021-04-02 23:16:05,057 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:16:05,283 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:16:05,301 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:16:05,302 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:16:05,305 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:16:05,529 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:16:05,555 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 5 videos
+2021-04-02 23:16:05,556 - DEBUG - [download] Downloading video 1 of 5
+2021-04-02 23:16:05,558 - DEBUG - [download] video responce has already been recorded in archive
+2021-04-02 23:16:05,559 - DEBUG - [download] Downloading video 2 of 5
+2021-04-02 23:16:05,560 - DEBUG - [download] noon video has already been recorded in archive
+2021-04-02 23:16:05,561 - DEBUG - [download] Downloading video 3 of 5
+2021-04-02 23:16:05,562 - DEBUG - [download] Cool shirt has already been recorded in archive
+2021-04-02 23:16:05,564 - DEBUG - [download] Downloading video 4 of 5
+2021-04-02 23:16:05,565 - DEBUG - [download] beer topper has already been recorded in archive
+2021-04-02 23:16:05,566 - DEBUG - [download] Downloading video 5 of 5
+2021-04-02 23:16:05,567 - DEBUG - [download] Century eggs has already been recorded in archive
+2021-04-02 23:16:05,569 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:16:05,571 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:16:05,573 - DEBUG - sleeping 600 seconds
+2021-04-02 23:16:26,899 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:16:27,234 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:16:27,478 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:16:27,507 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:16:27,511 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:16:27,516 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:16:27,789 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:16:27,794 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 5 videos
+2021-04-02 23:16:27,799 - DEBUG - [download] Downloading video 1 of 5
+2021-04-02 23:16:27,803 - DEBUG - [download] video responce has already been recorded in archive
+2021-04-02 23:16:27,807 - DEBUG - [download] Downloading video 2 of 5
+2021-04-02 23:16:27,811 - DEBUG - [download] noon video has already been recorded in archive
+2021-04-02 23:16:27,815 - DEBUG - [download] Downloading video 3 of 5
+2021-04-02 23:16:27,819 - DEBUG - [download] Cool shirt has already been recorded in archive
+2021-04-02 23:16:27,823 - DEBUG - [download] Downloading video 4 of 5
+2021-04-02 23:16:27,827 - DEBUG - [download] beer topper has already been recorded in archive
+2021-04-02 23:16:27,831 - DEBUG - [download] Downloading video 5 of 5
+2021-04-02 23:16:27,835 - DEBUG - [download] Century eggs has already been recorded in archive
+2021-04-02 23:16:27,841 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:16:27,845 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:16:27,849 - DEBUG - sleeping 600 seconds
+2021-04-02 23:16:38,919 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:16:38,926 - DEBUG - {'playlistend': 5, 'download_archive': 'alreadyDownloaded.txt', 'ignoreerrors': True, 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:16:39,245 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:16:39,540 - DEBUG - [download] Downloading playlist: KingCobraJFS - Home
+2021-04-02 23:16:39,545 - DEBUG - [youtube:tab] playlist KingCobraJFS - Home: Downloading 1 videos
+2021-04-02 23:16:39,550 - DEBUG - [download] Downloading video 1 of 1
+2021-04-02 23:16:39,555 - DEBUG - [youtube:tab] KingCobraJFS: Downloading webpage
+2021-04-02 23:16:39,790 - DEBUG - [download] Downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:16:39,795 - DEBUG - [youtube:tab] playlist KingCobraJFS - Videos: Downloading 5 videos
+2021-04-02 23:16:39,799 - DEBUG - [download] Downloading video 1 of 5
+2021-04-02 23:16:39,803 - DEBUG - [download] video responce has already been recorded in archive
+2021-04-02 23:16:39,807 - DEBUG - [download] Downloading video 2 of 5
+2021-04-02 23:16:39,811 - DEBUG - [download] noon video has already been recorded in archive
+2021-04-02 23:16:39,816 - DEBUG - [download] Downloading video 3 of 5
+2021-04-02 23:16:39,820 - DEBUG - [download] Cool shirt has already been recorded in archive
+2021-04-02 23:16:39,824 - DEBUG - [download] Downloading video 4 of 5
+2021-04-02 23:16:39,828 - DEBUG - [download] beer topper has already been recorded in archive
+2021-04-02 23:16:39,832 - DEBUG - [download] Downloading video 5 of 5
+2021-04-02 23:16:39,836 - DEBUG - [download] Century eggs has already been recorded in archive
+2021-04-02 23:16:39,840 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Videos
+2021-04-02 23:16:39,844 - DEBUG - [download] Finished downloading playlist: KingCobraJFS - Home
+2021-04-02 23:16:39,848 - DEBUG - sleeping 600 seconds
+2021-04-02 23:16:53,613 - DEBUG - yotube-dl_daemon time to start was 0.37s
+2021-04-02 23:16:53,617 - DEBUG - {'playlistend': 5, 'download_archive': 'alreadyDownloaded.txt', 'ignoreerrors': True, 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:16:58,273 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:16:58,278 - DEBUG - {'playlistend': 5, 'download_archive': 'alreadyDownloaded.txt', 'ignoreerrors': True, 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:16:58,279 - DEBUG - {'playlistend': 5, 'download_archive': 'alreadyDownloaded.txt', 'ignoreerrors': True, 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:17:22,894 - DEBUG - yotube-dl_daemon time to start was 0.37s
+2021-04-02 23:17:22,899 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>,
+ 'playlistend': 5}
+2021-04-02 23:17:22,902 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>,
+ 'playlistend': 5}
+2021-04-02 23:18:16,203 - DEBUG - yotube-dl_daemon time to start was 0.37s
+2021-04-02 23:18:16,220 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>,
+ 'playlistend': 5}
+2021-04-02 23:18:16,222 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>,
+ 'playlistend': 5}
+2021-04-02 23:19:01,368 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:19:01,374 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>,
+ 'playlistend': 5}
+2021-04-02 23:19:01,378 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>,
+ 'playlistend': 5}
+2021-04-02 23:20:27,558 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:20:27,565 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:20:27,569 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:20:51,031 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:20:51,037 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:20:51,041 - DEBUG - {}
+2021-04-02 23:20:51,044 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:21:46,476 - DEBUG - yotube-dl_daemon time to start was 0.37s
+2021-04-02 23:21:46,496 - DEBUG - jsonConfig is not file
+2021-04-02 23:21:46,501 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:21:46,505 - DEBUG - {}
+2021-04-02 23:21:46,508 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:21:58,391 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:21:58,399 - DEBUG - jsonConfig=WindowsPath('.') is not file
+2021-04-02 23:21:58,404 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:21:58,408 - DEBUG - {}
+2021-04-02 23:21:58,412 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:22:26,136 - DEBUG - yotube-dl_daemon time to start was 0.37s
+2021-04-02 23:22:26,140 - DEBUG - jsonConfig=WindowsPath('.') is not file
+2021-04-02 23:22:26,147 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:22:26,151 - DEBUG - {}
+2021-04-02 23:22:26,155 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:22:33,423 - DEBUG - yotube-dl_daemon time to start was 0.39s
+2021-04-02 23:22:33,427 - DEBUG - jsonConfig=WindowsPath('.') is not file
+2021-04-02 23:22:33,432 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:22:33,437 - DEBUG - {}
+2021-04-02 23:22:33,440 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:22:50,606 - DEBUG - yotube-dl_daemon time to start was 0.39s
+2021-04-02 23:22:50,610 - DEBUG - jsonConfig=WindowsPath('.') is not file
+2021-04-02 23:22:50,615 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:22:50,619 - DEBUG - {}
+2021-04-02 23:22:50,622 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:22:57,691 - DEBUG - yotube-dl_daemon time to start was 0.40s
+2021-04-02 23:22:57,695 - DEBUG - jsonConfig=WindowsPath('.') is not file
+2021-04-02 23:22:57,702 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:22:57,707 - DEBUG - {}
+2021-04-02 23:22:57,711 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:24:59,502 - DEBUG - yotube-dl_daemon time to start was 0.41s
+2021-04-02 23:24:59,508 - DEBUG - jsonConfig=WindowsPath('.') is not file
+2021-04-02 23:26:00,497 - DEBUG - yotube-dl_daemon time to start was 0.39s
+2021-04-02 23:26:00,506 - DEBUG - jsonConfig=WindowsPath('.') is not file
+2021-04-02 23:26:06,490 - DEBUG - yotube-dl_daemon time to start was 0.40s
+2021-04-02 23:26:06,501 - DEBUG - jsonConfig=WindowsPath('.') is not file
+2021-04-02 23:27:39,473 - DEBUG - yotube-dl_daemon time to start was 0.40s
+2021-04-02 23:27:39,488 - DEBUG - jsonConfig=WindowsPath('.') is not file
+2021-04-02 23:27:48,187 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:27:48,203 - ERROR - couldn't parse {json_config=}
+2021-04-02 23:28:02,584 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:28:02,589 - ERROR - couldn't parse f{json_config=}
+2021-04-02 23:28:25,492 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:28:25,501 - ERROR - couldn't parse f{json_config=}
+2021-04-02 23:28:31,369 - DEBUG - yotube-dl_daemon time to start was 0.37s
+2021-04-02 23:28:31,379 - ERROR - couldn't parse f{json_config=}
+2021-04-02 23:28:35,990 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:28:36,001 - ERROR - couldn't parse f{json_config=}
+Traceback (most recent call last):
+  File "C:\Users\Ryan\Desktop\youtubedl_daemon.py", line 69, in main
+    ytdlJsonParams = json.load(conf)
+  File "C:\Users\Ryan\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Users\Ryan\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Ryan\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Ryan\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 3 column 2 (char 28)
+2021-04-02 23:28:47,552 - DEBUG - yotube-dl_daemon time to start was 0.37s
+2021-04-02 23:30:35,957 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:31:13,603 - DEBUG - yotube-dl_daemon time to start was 0.38s
+2021-04-02 23:31:13,612 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>}
+2021-04-02 23:31:13,616 - DEBUG - {'playlistend': 2}
+2021-04-02 23:31:13,620 - DEBUG - {'download_archive': 'alreadyDownloaded.txt',
+ 'ignoreerrors': True,
+ 'logger': <Logger __main__ (DEBUG)>,
+ 'playlistend': 2}
