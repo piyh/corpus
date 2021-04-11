@@ -1,4 +1,3 @@
 /Python/ytdl-daemon/youtube-dl_daemon.log
 /Python/ytdl-daemon/alreadyDownloaded.txt
-**/*-checkpoint.ipynb*
-Python/.ipynb_checkpoints/deduplicator.ipynb-checkpoint.bkup
+**/.ipynb_checkpoints/
