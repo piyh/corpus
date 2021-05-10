@@ -1,3 +1,6 @@
 /Python/ytdl-daemon/youtube-dl_daemon.log
 /Python/ytdl-daemon/alreadyDownloaded.txt
 **/.ipynb_checkpoints/
+**/*checkpoint.ipynb
+**/.idea/
+**/out.*
