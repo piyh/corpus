@@ -1,17 +1,17 @@
 import os, os.path as path
 from datetime import datetime 
 from pathlib import Path
+import webvtt
 
-os.chdir("D:/kingcobrajfs")
+os.chdir("C:/Users/Ryan/Desktop/Files/kingcobrajfs")
 
 lastCap = ""
 minuteCache = 0
 
 targetVTT = ''
-findString = 'bald'
+findString = 'ripping ass'
 fileList = [name for name in os.listdir('.') if os.path.isfile(name) and ".vtt" in name and targetVTT in name]
 
-import webvtt
 with open('transcript', 'w') as f:
     for vtt in fileList:
         vttName = vtt
@@ -53,7 +53,7 @@ with open('transcript', 'w') as f:
                 pass
             #look for word/phrase and link to timestamp
             ctime = datetime.fromtimestamp(vttPath.stat().st_ctime)
-            if findString in caption.text and ctime.year == 2020 and ctime.month in (7,8):#' pill ' in caption.text:
+            if findString in caption.text:# and ctime.year == 2020 and ctime.month in (7,8):#' pill ' in caption.text:
                 #hour = caption.start[0:2]
                 #minute = caption.start[3:5]
                 #second = caption.start[6:8]
