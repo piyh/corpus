@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Thumbnail Bracket</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Cobra Thumbnail Tournament</h1>
+        <p class="lead">
+          There exists a need to have a ranked list of Cobra thumbnails. This
+          website is to find the cream of the crop, the cardinal cherry of the
+          food hack, the cheese pull of the custom Dominos pizza.
+        </p>
+        <hr class="my-4" />
+        <p>Your rankings will be aggregated and returned to the community.</p>
+        <p class="lead"></p>
+        <div>
+          <a class="btn btn-primary btn-lg" href="{% url 'vote' %}" role="button">Vote!</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button"
+            >View leaderboards</a
+          >
+        </div>
+      </div>
+      <br />
+      <div class="container-md">
+        <table
+          border="1"
+          class="
+            dataframe
+            table table-bordered table-striped table-hover table-dark
+          "
+        >
+          <!-- table-dark -->
+          <thead>
+            <tr style="text-align: right">
+              <th>Name</th>
+              <th>Age</th>
+              <th>Affiliation</th>
+              <th>test</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alex</td>
+              <td>10</td>
+              <td>Shark</td>
+              <td>testValue</td>
+            </tr>
+            <tr>
+              <td>Bob</td>
+              <td>12</td>
+              <td>Shark</td>
+              <td>testValue</td>
+            </tr>
+            <tr>
+              <td>Clarke</td>
+              <td>13</td>
+              <td>Jet</td>
+              <td>testValue</td>
+            </tr>
+            <tr>
+              <td>Clarke</td>
+              <td>14</td>
+              <td>Crip</td>
+              <td>testValue</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
