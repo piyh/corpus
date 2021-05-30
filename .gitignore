@@ -5,3 +5,4 @@
 **/.idea/
 **/out.*
 __pycache__
+*.log

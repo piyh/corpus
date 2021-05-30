@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% load static %} {% static 'thumbnails' as base_url %}
+
+  <link href="sticky-footer-navbar.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/fontawesome.min.css" />
+  <link rel="icon" type="image/jpg" href="{% static 'favicon-16x16.png' %}" />
+  <link rel="icon" type="image/jpg" href="{% static 'favicon-32x32.png' %}" />
+
+  <title>TMDWU</title>
+</head>
+
+<body class="d-flex flex-column h-100">
+  <!--class="d-flex flex-column h-100"-->
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand">Cobe vs Cobe</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1">Leaderboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1">Vote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="flex-shrink-0 mt-5 pt-3">
+    <div class="container">
+      <!--        <div class=" align-self-center"></div> -->
+      <div class="jumbotron ">
+        <h1 class="display-5">Cobra Thumbnail Tournament</h1>
+        <p>
+          Join the search in finding the cream of the crop, the cardinal cherry of the
+          food hack, the cheese pull of the custom Dominos pizza, the best KingCobraJFS thumbnail of them all.
+        </p>
+        <hr class="my-4" />
+        <p>Your rankings will be aggregated and returned to the community.</p>
+        <p class="lead"></p>
+        <div>
+          <a class="btn btn-primary btn-lg" href="{% url 'bracket.index' %}" role="button">Vote!</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button">View leaderboards</a>
+        </div>
+      </div>
+      <br />
+      <div class="container-md">
+        <table border="1" class="
+            dataframe
+            table table-bordered table-striped table-hover 
+          ">
+          <!-- table-dark -->
+          <thead>
+            <tr style="text-align: right">
+              <th>Name</th>
+              <th>Age</th>
+              <th>Affiliation</th>
+              <th>test</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alex</td>
+              <td>10</td>
+              <td>Shark</td>
+              <td>testValue</td>
+            </tr>
+            <tr>
+              <td>Bob</td>
+              <td>12</td>
+              <td>Shark</td>
+              <td>testValue</td>
+            </tr>
+            <tr>
+              <td>Clarke</td>
+              <td>13</td>
+              <td>Jet</td>
+              <td>testValue</td>
+            </tr>
+            <tr>
+              <td>Clarke</td>
+              <td>14</td>
+              <td>Crip</td>
+              <td>testValue</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container-fluid">
+        <form action="/result/" method="POST">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-md-6 p-1">
+              <input type="image" name="{{left_ytid}}" class="float-left img-fluid rounded " src={{base_url}}/{{left}}
+                alt="{{left}}">
+              <!--style="width: 45%"-->
+            </div>
+            <div class="col-md-6 p-1">
+              <input type="image" name="{{right_ytid}}" class="float-right img-fluid rounded "
+                src={{base_url}}/{{right}} alt="{{right}}">
+              <!--style="width: 45%"-->
+
+              <!--<img class="float-right img-fluid rounded" src="{% static 'thumbnails/Taco Jhon’s Boss Burito review-7H3VhvU_2Aw.webp' %}"/>-->
+            </div>
+        </form>
+        <!--<hr class="my-4" />-->
+
+      </div>
+    </div>
+    <!--      </div> -->
+    </div>
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted"> <a href="https://xkcd.com/915/" style="color: #f0f0f0">915</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

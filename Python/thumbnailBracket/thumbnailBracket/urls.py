@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='bracket.index'),
     path('vote/<str:ytid1>-<str:ytid2>', views.vote, name='bracket.vote'),
+    path('result/', views.result, name='bracket.result'),
+    #path('result/', views.result, name='bracket.result'),
 
 ]

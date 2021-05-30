@@ -1,10 +1,19 @@
 from django.http import HttpResponse
-from django.template import loader
+from django.shortcuts import render
+from urllib.parse import quote #urlencode, 
 
-from .models import Leaderboard, Vote, Thumbnail
+try:
+    from .models import Leaderboard, Vote, Thumbnail
+except:
+    print('got import errors when importing models')
+    #TODO: remove block, keep import
+    pass
 
 from pathlib import Path
 from configparser import ConfigParser
+import logging
+import sys
+from pprint import pformat
 
 configPath = Path('C:/Users/Ryan/Desktop/Files/corpus/Python/thumbnailBracket/bracket/config.ini')
 if not configPath.exists():
@@ -13,7 +22,18 @@ if not configPath.exists():
 config = ConfigParser()
 config.read(configPath)
 channelDir = Path(config['globals']['channelDirectory'])
-thumbnailExtensions = {'webp','jpg'}
+thumbnailExtensions = {'.webp','.jpg'}
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+fh = logging.FileHandler('django.log')
+sh = logging.StreamHandler(sys.stdout)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+fh.setFormatter(formatter)
+sh.setFormatter(formatter)
+logger.addHandler(fh)
+logger.addHandler(sh)
+
 
 def findFile(ytid: str, extensions: set[str]) -> Path:
     for file in channelDir.iterdir():
@@ -22,12 +42,21 @@ def findFile(ytid: str, extensions: set[str]) -> Path:
                 and set(file.suffixes).intersection(extensions)):
             return file
     else:
+        logger.exception(f"couldn't {ytid} with extensions {extensions}")
         raise FileNotFoundError('Could not find ytid')
 
 def index(request):
+    #template = loader.get_template('polls/index.html')
+    #context = {'left':'Datong is not a social Statis-LipcFI8tq_I.webp'}
     return HttpResponse("Hello, world. You're at the index.")
     
 def vote(request, ytid1, ytid2):
+    #template = loader.get_template('bracket/index.html')
+    context = {'left':quote('Datong is not a social Statis-LipcFI8tq_I.webp'),
+               'left_ytid': 'LipcFI8tq_I',
+               'right':quote('Taco Jhon’s Boss Burito review-7H3VhvU_2Aw.webp'),
+               'right_ytid':'7H3VhvU_2Aw',
+                }
     try:
         left = findFile(ytid1, thumbnailExtensions)
         right = findFile(ytid2, thumbnailExtensions)
@@ -37,7 +66,15 @@ def vote(request, ytid1, ytid2):
             "\n"
             f""
         )
-    return HttpResponse(msg)
+    return render(request, 'index.html',context)#HttpResponse(msg)
+
+def result(request):
+    if request.method == 'POST':
+        logger.debug(dict(request.POST))
+        return HttpResponse(pformat(dict(request.POST)).replace('\n','<br/>'))
+
 
 if __name__ == '__main__':
     print(findFile('LipcFI8tq_I', thumbnailExtensions))
+    print(findFile('7H3VhvU_2Aw', thumbnailExtensions))
+    #http://127.0.0.1:8000/vote/LipcFI8tq_I-7H3VhvU_2Aw
