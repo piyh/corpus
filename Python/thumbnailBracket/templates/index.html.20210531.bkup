@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %} {% static 'thumbnails' as thumbnails %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+  <link  rel="stylesheet" href="{% static 'sticky-footer-navbar.css' %}" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/fontawesome.min.css" />
+  <link rel="icon" type="image/jpg" href="{% static 'favicon-16x16.png' %}" />
+  <link rel="icon" type="image/jpg" href="{% static 'favicon-32x32.png' %}" />
+  
+  <title>TMDWU</title>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+  <!--class="d-flex flex-column h-100"-->
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-md col-md-9 ">
+        <span class="navbar-brand">Cobe vs Cobe</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1">Leaderboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1">Vote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="col-md-9 container-md mx-auto"> <!--mt-5 pt-3-->
+    <div class="jumbotron ">
+      <h1 class="display-5">Cobra Thumbnail Tournament</h1>
+      <p>
+        Join the search in finding the cream of the crop, the cardinal cherry of the
+        food hack, the cheese pull of the custom Dominos pizza, the best KingCobraJFS thumbnail of them all.
+      </p>
+      <hr class="my-4" />
+      <p>Your rankings will be aggregated and returned to the community.</p>
+      <p class="lead"></p>
+      <div>
+        <a class="btn btn-primary btn-lg" href="{% url 'bracket.index' %}" role="button">Vote!</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button">View leaderboards</a>
+      </div>
+    </div>
+    <br />
+
+    </div>
+    </div>
+
+    <table border="1" class="
+    dataframe
+    table table-bordered table-striped table-hover 
+  ">
+      <!-- table-dark -->
+      <thead>
+        <tr style="text-align: right">
+          <th>Name</th>
+          <th>Age</th>
+          <th>Affiliation</th>
+          <th>test</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alex</td>
+          <td>10</td>
+          <td>Shark</td>
+          <td>testValue</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>12</td>
+          <td>Shark</td>
+          <td>testValue</td>
+        </tr>
+        <tr>
+          <td>Clarke</td>
+          <td>13</td>
+          <td>Jet</td>
+          <td>testValue</td>
+        </tr>
+        <tr>
+          <td>Clarke</td>
+          <td>14</td>
+          <td>Crip</td>
+          <td>testValue</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <img src={% static 'hairDye.jpeg' %} class="img-fluid d-block col-md-11 mx-auto" alt="kingcobrajfs hair dye picture">
+  </main>
+
+  <footer class="footer  bg-light">
+    <div class="container">
+      <span > <a href="https://xkcd.com/915/" style="color: #f0f0f0">915</a> <!--class="text-muted"-->
+      </span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+    
+</body>
+
+</html>

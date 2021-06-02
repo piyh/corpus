@@ -46,9 +46,11 @@ def findFile(ytid: str, extensions: set[str]) -> Path:
         raise FileNotFoundError('Could not find ytid')
 
 def index(request):
+    kwargs = {}
+    return render(request, 'index.html',kwargs)
     #template = loader.get_template('polls/index.html')
     #context = {'left':'Datong is not a social Statis-LipcFI8tq_I.webp'}
-    return HttpResponse("Hello, world. You're at the index.")
+    
     
 def vote(request, ytid1, ytid2):
     #template = loader.get_template('bracket/index.html')
@@ -60,13 +62,15 @@ def vote(request, ytid1, ytid2):
     try:
         left = findFile(ytid1, thumbnailExtensions)
         right = findFile(ytid2, thumbnailExtensions)
+        context['left_friendly'] = left.name[:- len(left.suffix) - len('-ytidXXXXXXX')]
+        context['right_friendly'] = right.name[:- len(right.suffix) - len('-ytidXXXXXXX')]
     except:
         left, right = None, None
     msg = (f"You're at the vote page. Video thumbnails {left} and {right} duke it out."
             "\n"
             f""
         )
-    return render(request, 'index.html',context)#HttpResponse(msg)
+    return render(request, 'vote.html',context)#HttpResponse(msg)
 
 def result(request):
     if request.method == 'POST':
