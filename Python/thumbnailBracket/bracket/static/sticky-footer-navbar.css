@@ -15,11 +15,12 @@ footer {
   background-color: #f5f5f5;
 }
 
+
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-body  > main {
+body > main {
   margin: 60px 0px 30px;
   /*color: red;*/
 }
@@ -38,3 +39,5 @@ footer {
 code {
   font-size: 80%;
 }
+
+

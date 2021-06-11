@@ -9,7 +9,10 @@ from datetime import datetime, timedelta
 import argparse
 import json
 from pprint import pformat as pf
+import os
 logger = logging.getLogger()
+
+os.chdir('C:/Users/Ryan/Desktop/Files/kingcobrajfs')
 
 def getLogger(logDir = None):
     filename = 'youtube-dl_daemon.log'
@@ -27,7 +30,7 @@ def getLogger(logDir = None):
             logger.addHandler(fh)
         else:
             logger.error('got logDir parameter')
-            raise exception
+            raise Exception
  
     return logger
 
@@ -51,9 +54,8 @@ def my_hook(d):
         print('download finished')
 
 def main(**kwargs):
-    global logger
     if kwargs.get('logDir'):
-        logDir(kwargs.get('logDir'))
+        logDir = kwargs.get('logDir')
     else:
         logDir = Path()
              
@@ -84,28 +86,29 @@ def main(**kwargs):
         dateRange = DateRange(lookback.strftime(dtFormat), today.strftime(dtFormat))
     ytdl_opts = {
         #'playlistend': kwargs.get('maxDownloads',5),
-        'download_archive':kwargs.get('downloadedIdList',"alreadyDownloaded.txt"),
-        #'skip_download':kwargs.get('skip_download',False), #use for catching up on stuff like json files
+        #'download_archive':kwargs.get('downloadedIdList',"alreadyDownloaded.txt"),
+        'skip_download':kwargs.get('skip_download',True), #use for catching up on stuff like json files
         'ignoreerrors':kwargs.get('ignoreerrors',True),
         'logger': logger,
         #'progress_hooks': [my_hook],
-        #'writethumbnail':kwargs.get('writethumbnail',False),
-        #'writeinfojson':kwargs.get('writeinfojson',False),
+        'writethumbnail':kwargs.get('writethumbnail',True),
+        'writeinfojson':kwargs.get('writeinfojson',True),
         #'simulate': True,
         #'daterange': dateRange,
                
     }
     log(pf(ytdl_opts))
     log(pf(ytdlJsonParams))
-    defaultParams.update(ytdlJsonParams).update(kwargs) #make this work
+    #defaultParams.update(ytdlJsonParams).update(kwargs) #make this work
     ytdl_opts = {**ytdlJsonParams, **ytdl_opts}
     log(pf(ytdl_opts))
-    """while True:
+    while True:
         ytdl = youtube_dl.YoutubeDL(ytdl_opts) 
         ytdl.download(['https://www.youtube.com/user/KingCobraJFS/'])
         log(f"sleeping {kwargs.get('sleep_interval')} seconds")
-        time.sleep(kwargs.get('sleep_interval'))
-    """
+        break
+        time.sleep(kwargs.get('sleep_interval', 3600))
+    
 
 if __name__ == '__main__':
     kwargs = getArgs()

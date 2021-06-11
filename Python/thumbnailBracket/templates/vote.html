@@ -1,39 +1,6 @@
-{% extends "base.html" %}
-{% load static %} {% static 'thumbnails' as thumbnails %}
-
+{% extends 'base.html' %}
 {% block content %}
-<h5 class="display-5 text-center">Choose a Winner!</h1>
-  <p class="text-center">TWU or TMDNWU?</p>
-  <hr />
-
-  <form action="/result/" method="POST">
-    {% csrf_token %}
-    <div class="row">
-      <figure class="col-md-5 p-1">
-        <input type="image" name="{{left_ytid}}" class="float-left img-fluid rounded " src={{thumbnails}}/{{left}}
-          alt="{{left}}">
-        <figcaption class="col-xs-1" align='center'>{{left_friendly}}</figcaption>
-        <!--style="width: 45%"-->
-      </figure>
-
-      <div class="col-2 p-1 mx-auto my-auto">
-        <img src={% static 'vs.png' %} class="mx-auto img-fluid d-block w-10" alt="vs" style="max-width: 20;">
-      </div>
-      <figure class="col-md-5 p-1">
-        <input type="image" name="{{right_ytid}}" class="float-right img-fluid rounded " src={{thumbnails}}/{{right}}
-          alt="{{right}}">
-        <figcaption>{{right_friendly}}</figcaption>
-        <!--style="width: 45%"-->
-
-        <!--<img class="float-right img-fluid rounded" src="{% static 'thumbnails/Taco Jhon’s Boss Burito review-7H3VhvU_2Aw.webp' %}"/>-->
-      </figure>
-    </div>
-
-  </form>
-  <!--<hr class="my-4" />-->
-  <hr />
-  <p>Your rankings will be aggregated and returned to the community.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">View leaderboards</a>
-
-
-  {% endblock %}
+{% include "voteContainer.html" %}
+{% load static %} 
+<script src="{% static 'vote.js' %}"></script>
+{% endblock %}

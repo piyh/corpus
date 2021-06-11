@@ -1,0 +1,50 @@
+{% load static %} 
+<div id="vote-container">
+  <h5 class="display-5 text-center">Choose a Winner!</h1>
+    <p class="text-center text-muted">TWU or TMDNWU?</p>
+    <hr class="my-1" />
+    <form id="vote-form">
+        <div class="row">
+        <!--I'm using this loop just for two choices because I want this to be extensible to a 16 thumbnail bracket -->
+        {% for key, choice in choices.items %}
+            {% if choice == 'vs' %}
+                
+                <div class="col-2 p-0  my-auto mx-auto">
+                <img src="{% static 'vs.png' %}" class="mx-auto img-fluid d-block w-10" alt="vs" style="max-width: 20;">
+                </div>
+            {% elif choice %}            
+                <figure class="col-md-5">
+                    <figcaption class="text-center pb-1 lead">{{choice.title}}</figcaption>
+                    <input type="image" name="{{key}}" id="{{choice.id}}" class="img-fluid rounded w-100 thumbnail" src={{choice.thumbnail}}
+                    alt="{{choice.webpage_url}}">
+                </figure>
+            {% else %}
+                <p>Bad vote parameter passed to template</p>
+            {% endif %}
+      {% endfor %}
+        
+     </div>
+      {% csrf_token %}
+    </form>
+    <hr class="my-1" />
+    <div class="text-center">
+      <p class="text-center">Your rankings will be aggregated and returned to the community.</p>
+      <a class="btn btn-primary btn-lg m-1" href="#" role="button">View leaderboards</a>
+      <a class="btn btn-primary btn-lg m-1" href="#" role="button">View voting history</a>
+    </div>
+    TODO: put more video metadata here <br/>
+    TODO: allow using arrow keys to submit on left/right<br/>
+    #take a post request from the web form<br/>
+    #post request has win and lose ytids in a dict<br/>
+    #log the vote and serve up a new vote <br/>
+    #later enhance log the vote to save as model<br/>
+    #later enhance to set, retrieve and log cookies<br/>
+    #need to write functions to get random thumbnails<br/>
+    #later enhance to pull ranked<br/>
+    unify vote view and delete votecontainer.html leaving only  votecontainer2.html<br/>
+    make the array of jsons pop so I don't get duplicates and everything gets voted on at least once<br/>
+    thumbnail quality graphed over time<br/>
+
+    <div id="result"></div>
+</div>
+

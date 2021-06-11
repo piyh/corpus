@@ -1,0 +1,33 @@
+{% load static %} {% static 'thumbnails' as thumbnails %}
+<div id="vote-container">
+  <h5 class="display-5 text-center">Choose a Winner!</h1>
+    <p class="text-center text-muted">TWU or TMDNWU?</p>
+    <hr class="my-1" />
+    <form id="vote-form"">
+      <div class="row">
+        <figure class="col-md-5">
+          <figcaption class="text-center pb-1 lead">{{left_friendly}}</figcaption>
+          <input type="image" name="left" id="{{left_ytid}}" class="img-fluid rounded " src={{thumbnails}}/{{left}}
+            alt="{{left}}">
+        </figure>
+        <div class="col-2 p-0  my-auto mx-auto">
+          <img src="{% static 'vs.png' %}" class="mx-auto img-fluid d-block w-10" alt="vs" style="max-width: 20;">
+        </div>
+        <figure class="col-md-5">
+          <figcaption class="text-center pb-1 lead">{{right_friendly}}</figcaption>
+          <input type="image" name="right" id="{{right_ytid}}" class="img-fluid rounded " src={{thumbnails}}/{{right}}
+            alt="{{right}}">
+        </figure>
+      </div>
+      {% csrf_token %}
+    </form>
+    <hr class="my-1" />
+    <div class="text-center">
+      <p class="text-center">Your rankings will be aggregated and returned to the community.</p>
+      <a class="btn btn-primary btn-lg m-1" href="#" role="button">View leaderboards</a>
+      <a class="btn btn-primary btn-lg m-1" href="#" role="button">View voting history</a>
+    </div>
+    TODO: put more video metadata here
+    <div id="result"></div>
+</div>
+<!--<script src="{% static 'vote.js' %}"></script>-->
