@@ -2,22 +2,15 @@ import random
 from pathlib import Path
 from configparser import ConfigParser
 import json
-from pprint import pformat
-from pprint import pprint
-
+from pprint import pformat, pprint
 from django.http import HttpResponse
 from django.shortcuts import render
 from urllib.parse import quote
-from .common import config, channelDir, thumbnailExtensions, logger, intersperse
+from .common import config, channelDir, thumbnailExtensions, logger
+from .models import *
 from django.urls.resolvers import LocalePrefixPattern #urlencode, 
-
-try:
-    from .models import Leaderboard, Vote, Thumbnail
-except:
-    print('got import errors when importing models')
-    #TODO: remove block, keep import
-    pass
-
+import datetime
+dateFormat = '%Y-%m-%dT%H:%M:%S'
 
 def findFile(ytid: str, extensions: set[str]) -> Path:
     for file in channelDir.iterdir():
@@ -32,12 +25,10 @@ def findFile(ytid: str, extensions: set[str]) -> Path:
 def index(request):
     kwargs = {}
     return render(request, 'index.html',kwargs)
-    #template = loader.get_template('polls/index.html')
-    #context = {'left':'Datong is not a social Statis-LipcFI8tq_I.webp'}
-    
-def vote(request, ytid1 = None, ytid2 = None):
 
-    
+def vote(request, ytid1 = None, ytid2 = None):
+    if not request.session.session_key:
+        request.session['created']=datetime.datetime.now().strftime(dateFormat)
     choices = {}
     choices['left'] =  getVideoMetadata()
     choices['vs'] = 'vs'
@@ -48,29 +39,20 @@ def vote(request, ytid1 = None, ytid2 = None):
         response = render(request, 'vote.html', context)
     if request.method == 'POST':
         print(request.POST)
+        vote = Vote (**{
+            'loseYtid': request.POST['lose'],
+            'winYtid': request.POST['win'],
+            'postingIP': getClientIP(request), 
+            'session': request.session.session_key,
+        })
+        #import pdb; pdb.set_trace()
+        vote.save()
+        print(vote)
         response = render(request, 'voteContainer.html', context)
+
     return response  
 
-    if request.method == 'GET':
-        context = {'left':quote('Datong is not a social Statis-LipcFI8tq_I.webp'),
-                'left_ytid': 'LipcFI8tq_I',
-                'right':quote('Taco Jhon’s Boss Burito review-7H3VhvU_2Aw.webp'),
-                'right_ytid':'7H3VhvU_2Aw',
-                    }
-        try:
-            left = findFile(ytid1, thumbnailExtensions)
-            right = findFile(ytid2, thumbnailExtensions)
-            context['left_friendly'] = left.name[:- len(left.suffix) - len('-ytidXXXXXXX')]
-            context['right_friendly'] = right.name[:- len(right.suffix) - len('-ytidXXXXXXX')]
-        except:
-            left, right = None, None
-        msg = (f"You're at the vote page. Video thumbnails {left} and {right} duke it out."
-                "\n"
-                f""
-            )
-        return render(request, 'vote.html',context)#HttpResponse(msg)
-
-def get_client_ip(request):
+def getClientIP(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
     if x_forwarded_for:
         ip = x_forwarded_for.split(',')[0]

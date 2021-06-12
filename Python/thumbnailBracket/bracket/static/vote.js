@@ -1,6 +1,6 @@
 let voteForm = document.forms["vote-form"];
-let left = document.getElementsByName("left")[0];
-let right = document.getElementsByName("right")[0];
+var left = document.getElementsByName("left")[0];
+var right = document.getElementsByName("right")[0];
 
 function voteClick(e) {
   console.log("event on " + e.target.name);
@@ -21,6 +21,8 @@ function voteClick(e) {
       console.log("submitted!");
       document.getElementById("vote-container").innerHTML = request.response
       thumbnails = document.getElementsByClassName("thumbnail")
+      left = document.getElementsByName("left")[0];
+      right = document.getElementsByName("right")[0];
       for(ele of thumbnails){
           ele.addEventListener("click", voteClick);
       }
