@@ -71,7 +71,7 @@ def vote(request, ytid1 = None, ytid2 = None):
         },
         'webpage_url':{
             'displayName':'link',
-            'transformFunction': lambda x: f'<a href="{x}">!-----!</a>',
+            'transformFunction': lambda x: f'<a href="{x}" target="_blank">!-----!</a>',
             #'rank':6,
         },
     }

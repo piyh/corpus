@@ -1,35 +1,59 @@
-{% load static %} 
+{% load static %}
 <div id="vote-container">
-  <h5 class="display-5 text-center">Choose a Winner!</h1>
-    <p class="text-center text-muted">TWU or TMDNWU?</p>
-    <hr class="my-1" />
-    <form id="vote-form">
-        <div class="row">
-        <!--I'm using this loop just for two choices because I want this to be extensible to a 16 thumbnail bracket -->
-        {% for key, choice in choices.items %}
-            {% if choice == 'vs' %} 
+    <h5 class="display-5 text-center">Choose a Winner!</h1>
+        <p class="text-center text-muted">TWU or TMDNWU?</p>
+        <hr class="my-1" />
+        <form id="vote-form">
+            <div class="row">
+                <!--I'm using this loop just for two choices because I want this to be extensible to a 16 thumbnail bracket -->
+                {% for key, choice in choices.items %}
+                {% if choice == 'vs' %}
                 <div class="col-2 p-0  my-auto mx-auto">
-                <img src="{% static 'vs.png' %}" class="mx-auto img-fluid d-block w-10" alt="vs" style="max-width: 20;">
+                    <img src="{% static 'vs.png' %}" class="mx-auto img-fluid d-block w-10" alt="vs"
+                        style="max-width: 20;">
                 </div>
-            {% elif choice %}            
+                {% elif choice %}
                 <figure class="col-md-5">
                     <figcaption class="text-center pb-1 lead">{{choice.title}}</figcaption>
-                    <input type="image" name="{{key}}" id="{{choice.id}}" class="img-fluid rounded w-100 thumbnail" src={{choice.thumbnail}}
-                    alt="{{choice.webpage_url}}">
+                    <input type="image" name="{{key}}" id="{{choice.id}}" class="img-fluid rounded w-100 thumbnail"
+                        src={{choice.thumbnail}} alt="{{choice.webpage_url}}">
                 </figure>
-            {% else %}
+                {% else %}
                 <p>Bad vote parameter passed to template</p>
-            {% endif %}
-      {% endfor %}
-     </div>
-      {% csrf_token %}
-    </form>
-    <hr class="my-1" />
-    <div class="text-center">
-      <p class="text-center">Your rankings will be aggregated and returned to the community.</p>
-      <a class="btn btn-primary btn-lg m-1" href="#" role="button">View leaderboards</a>
-      <a class="btn btn-primary btn-lg m-1" href="#" role="button">View voting history</a>
-    </div>
-    <div id="result"></div>
-</div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% csrf_token %}
+        </form>
+        <hr class="my-1" />
 
+
+        <div class="row" id="ytInfoTable">
+            {% for key, choice in choices.items %}
+            {% if choice == 'vs' %}
+            <div class="col-2"></div>
+            {% else %}
+            <div class="col-md-5 table-responsive"">
+                <table class=" table table-sm">
+                {% for key, value in choice.ytMetadata.items %}
+                {% if key != 'link' %}
+                <tr class="">
+                    <th>{{key}}</th>
+                    <td align="right">{{value|safe}}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                <tr class=""><th>Link</th><td align="right">{{choice.ytMetadata.link | safe}}</td></tr>
+                </table>
+                
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="text-center">
+            <a class="btn btn-primary btn-lg m-1" href="#" role="button">View leaderboards</a>
+            <a class="btn btn-primary btn-lg m-1" href="#" role="button">View voting history</a>
+        </div>
+
+</div>

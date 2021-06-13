@@ -5,66 +5,21 @@
 
 {% block content %}
 <div class="jumbotron ">
-    <h1 class="display-5">Cobra Thumbnail Tournament</h1>
-    <p>
-      Join the search in finding the cream of the crop, the cardinal cherry of the
-      food hack, the cheese pull of the custom Dominos pizza, the best KingCobraJFS thumbnail of them all.
-    </p>
-    <hr class="my-4" />
-    <p>Your rankings will be aggregated and returned to the community.</p>
-    <p class="lead"></p>
-    <div>
-      <a class="btn btn-primary btn-lg" href="{% url 'bracket.index' %}" role="button">Vote!</a>
-      <a class="btn btn-primary btn-lg" href="#" role="button">View leaderboards</a>
-    </div>
-  </div>
+  <h1 class="display-5">Cobra Thumbnail Tournament</h1>
+  <p>
+    Join the search in finding the cream of the crop, the cardinal cherry of the
+    food hack, the cheese pull of the custom Dominos pizza, the best KingCobraJFS thumbnail of them all.
+  </p>
   <br />
-
+  <p class="lead"></p>
+  <div>
+    <a class="btn btn-primary btn-lg" href="{% url 'bracket.index' %}" role="button">Vote!</a>
+    <a class="btn btn-primary btn-lg" href="#" role="button">View leaderboards</a>
   </div>
-  </div>
+</div>
+<br />
 
-  <table border="1" class="
-  dataframe
-  table table-bordered table-striped table-hover 
-">
-    <!-- table-dark -->
-    <thead>
-      <tr style="text-align: right">
-        <th>Name</th>
-        <th>Age</th>
-        <th>Affiliation</th>
-        <th>test</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Alex</td>
-        <td>10</td>
-        <td>Shark</td>
-        <td>testValue</td>
-      </tr>
-      <tr>
-        <td>Bob</td>
-        <td>12</td>
-        <td>Shark</td>
-        <td>testValue</td>
-      </tr>
-      <tr>
-        <td>Clarke</td>
-        <td>13</td>
-        <td>Jet</td>
-        <td>testValue</td>
-      </tr>
-      <tr>
-        <td>Clarke</td>
-        <td>14</td>
-        <td>Crip</td>
-        <td>testValue</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <img src={% static 'hairDye.jpeg' %} class="img-fluid d-block col-md-11 mx-auto" alt="kingcobrajfs hair dye picture">
+<hr class="my-4" />
+<img src={% static 'hairDye.jpeg' %} class="img-fluid d-block col-md-11 mx-auto" alt="kingcobrajfs hair dye picture">
 
-  {% endblock %}
-  
+{% endblock %}
