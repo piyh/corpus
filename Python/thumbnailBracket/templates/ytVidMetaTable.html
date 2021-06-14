@@ -1,0 +1,14 @@
+<div class="col-md-{{colLen}} table-responsive"">
+    <table class=" table table-sm">
+    {% for key, value in ytMetadatum.items %}
+    {% if key != 'link' %}
+    <tr class="">
+        <th>{{key}}</th>
+        <td align="right">{{value|safe}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+    <tr class=""><th>Link</th><td align="right">{{ytMetadatum.link | safe}}</td></tr>
+    </table>
+    
+</div>

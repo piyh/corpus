@@ -24,12 +24,6 @@ def index(request):
     kwargs = {}
     return render(request, 'index.html',kwargs)
 
-def leaderboard(request):
-    kwargs = {}
-    kwargs['leaders'] = getLeaders()
-
-    return render(request, 'leaderboard.html',kwargs)
-
 def test(request):
     """
     throw whatever functionality here for debugging
@@ -38,33 +32,26 @@ def test(request):
     getLeaders()
     return HttpResponse('hi')
 
-def getLeaders() -> list:
+def leaderboard(request, resultLimit:int = 24) -> list:
     """
-    idk what, not working
+    TODO: docstring
     """
-    sql = 'select winYtid, count(*) from bracket_vote group by winYtid order by count(*) desc limit 25;'
-    results = runSql(sql)
+    params = {'resultLimit':resultLimit }
+    sql = 'select winYtid, count(*) from bracket_vote group by winYtid order by count(*) desc limit :resultLimit;'
+    results = runSql(sql,params)
+
     leaders = []
-    while results:
-        ytId, wins = results.pop()
+    for ytId, wins in results:        
         metadatum = metadata[ytId]
         metadatum['wins'] = wins
-        pprint(metadatum)
         leaders.append(metadatum)
-    #sql = 'select loseYtid, sum(*) from bracket_vote group by winYtid order by count(*) desc limit 25;'
-    #results = runSql(sql)
-    #for r in results:
-        #do stuff
-    return(leaders)
+    leaders = [(rank + 1, metadatum, metadatumDisplayMap(metadatum)) for rank,metadatum in enumerate(leaders)]
+    kwargs = {}
+    kwargs['leaders'] = leaders
+    return render(request, 'leaderboard.html',kwargs)
 
-def vote(request, ytid1 = None, ytid2 = None):
-    if not request.session.session_key:
-        request.session['created']=datetime.datetime.now().strftime(dateFormat)
-    choices = {}
-    choices['left'] =  getRandYtidMeta()
-    choices['vs'] = 'vs'
-    choices['right'] = getRandYtidMeta()
-    context = {'choices':choices}    
+def metadatumDisplayMap(metadatum:dict) -> dict:
+    """takes an info json and returns a new dict that has display values for the ytVidMetaTable.html include"""
     infoTableMap = {
         'upload_date':{
             'displayName':'Uploaded',
@@ -88,28 +75,40 @@ def vote(request, ytid1 = None, ytid2 = None):
             'transformFunction': lambda x: f'<a href="{x}" target="_blank">!-----!</a>',
         },
     }
-    #set a display key in choice dict that will be what shows on the ytInfoTable div 
-    for choice in context['choices'].values():
-        infoTable = {}
-        if choice == 'vs':
+    displayDict = {}
+    for k,v in metadatum.items():
+        if k == 'title':
+            title = v
             continue
+        if not infoTableMap.get(k):
+            continue
+        displayName = infoTableMap[k]['displayName']          
 
-        for k,v in choice.items():
-            if not infoTableMap.get(k):
-                continue
-            displayName = infoTableMap[k]['displayName']          
+        transform = infoTableMap[k].get('transformFunction')
+        if transform:
+            displayValue = transform(v)
+        else:
+            displayValue = v
+        displayDict[displayName] = displayValue
+    
+    #after transforming the display value, make the anchor inner text be the video title
+    displayDict['link'] = displayDict['link'].replace('!-----!',title)
+    return displayDict
 
-            transform = infoTableMap[k].get('transformFunction')
-            if transform:
-                displayValue = transform(v)
-                if k == 'webpage_url':
-                    #after transforming the display value, make the anchor inner text be the video title
-                    displayValue =  displayValue.replace('!-----!',choice['title'])
-            else:
-                displayValue = v
+def vote(request, ytid1 = None, ytid2 = None):
+    if not request.session.session_key:
+        request.session['created']=datetime.datetime.now().strftime(dateFormat)
+    choices = {}
+    choices['left'] =  getRandYtidMeta()
+    choices['vs'] = 'vs'
+    choices['right'] = getRandYtidMeta()
+    context = {'choices':choices}    
 
-            infoTable[displayName] = displayValue
-        choice['ytMetadata'] = infoTable
+    #set a display key in choice dict that will be what shows on the ytVidMetaTable div 
+    for choice in context['choices'].values():
+        if choice == 'vs':
+            continue        
+        choice['ytMetadata'] = metadatumDisplayMap(choice)
     #choices = intersperse(choices, 'vs')
     if request.method == 'GET':
         response = render(request, 'vote.html', context)
@@ -140,7 +139,7 @@ def getClientIP(request):
 def runSql(sql: str,bindVariables: list = None) -> list:
     """
     runs sql that should be read only against the django sqlite db.  
-    Can take bind variables in the standard sqlite3 module styles
+    Can take bind variables in the standard sqlite3 module styles.
     """
     with sqlite3.connect('db.sqlite3') as con:
         cur = con.cursor() 
@@ -154,10 +153,12 @@ def runSql(sql: str,bindVariables: list = None) -> list:
             #    ("Go", 2009),
             #]
             #cur.executemany("insert into lang values (?, ?)", lang_list)
-
-        cur.execute(sql)
+        args = [sql]
+        if bindVariables:
+            args.append(bindVariables)
+        cur.execute(*args)
         results = cur.fetchall()
         return results
-
+        
 if __name__ == '__main__':
     print(getVideoMetadata('c1mhLFuiGeg'))

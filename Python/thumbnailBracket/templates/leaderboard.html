@@ -4,62 +4,29 @@
 {% block content %}
 <div class="jumbotron ">
     <h1 class="display-5">Best of the Boglim</h1>
-    <p> These are what's up </p>
+    <p> These are what's up, best first </p>
 </div>
 
 
 <div class="row">
     <!--I'm using this loop just for two choices because I want this to be extensible to a 16 thumbnail bracket -->
-    {% for ytVid in leaders %}
+    {% for rank, metadata, displayMetadata in leaders %}
     <figure class="col-md-4">
-        <figcaption class="text-center pb-1 lead">{{ytVid.title}}</figcaption>
-        <img type="image" name="{{key}}" id="{{ytVid.id}}" class="img-fluid rounded w-100 thumbnail"
-            src={{ytVid.thumbnail}} alt="{{ytVid.webpage_url}}">
+        <div class="row">
+            <div class="col">
+                <figcaption class="text-center pb-1">{{metadata.title}}</figcaption>
+            </div>
+        </div>
+        <img type="image" name="{{key}}" id="{{metadata.id}}" class="img-fluid rounded w-100 thumbnail"
+            src={{metadata.thumbnail}} alt="{{metadata.webpage_url}}">
+        <div class="row">
+            {% include "ytVidMetaTable.html" with ytMetadatum=displayMetadata colLen=12 %}
+        </div>
     </figure>
+
 
     {% endfor %}
 </div>
 {% csrf_token %}
-
-<!-- table-dark -->
-
-<table border="1" class="dataframe table table-bordered table-striped table-hover "">
-    <thead>
-        <tr style="text-align: right">
-            <th>Name</th>
-            <th>Age</th>
-            <th>Affiliation</th>
-            <th>test</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Alex</td>
-            <td>10</td>
-            <td>Shark</td>
-            <td>testValue</td>
-        </tr>
-        <tr>
-            <td>Bob</td>
-            <td>12</td>
-            <td>Shark</td>
-            <td>testValue</td>
-        </tr>
-        <tr>
-            <td>Clarke</td>
-            <td>13</td>
-            <td>Jet</td>
-            <td>testValue</td>
-        </tr>
-        <tr>
-            <td>Clarke</td>
-            <td>14</td>
-            <td>Crip</td>
-            <td>testValue</td>
-        </tr>
-    </tbody>
-</table>
-
-<img src={% static 'hairDye.jpeg' %} class="img-fluid d-block col-md-11 mx-auto" alt="kingcobrajfs hair dye picture">
 
 {% endblock %}

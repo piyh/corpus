@@ -23,8 +23,9 @@ urlpatterns = [
     path('vote/', views.vote, name='bracket.vote'),
     path('vote/<str:ytid1>-<str:ytid2>', views.vote, name='bracket.vote-ids'),
     path('leaderboard/', views.leaderboard, name='bracket.leaderboard'),
+    path('leaderboard/<int:resultLimit>', views.leaderboard),
     #path('result/', views.voted, name='bracket.result'),
-     path('test/', views.test, name='bracket.test'),
+    path('test/', views.test, name='bracket.test'),
 
     #path('result/', views.result, name='bracket.result'),
 
