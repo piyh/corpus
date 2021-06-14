@@ -10,15 +10,13 @@
 
 <div class="row">
     <!--I'm using this loop just for two choices because I want this to be extensible to a 16 thumbnail bracket -->
-    {% for ytVid, votes in leaders %}
+    {% for ytVid in leaders %}
     <figure class="col-md-4">
         <figcaption class="text-center pb-1 lead">{{ytVid.title}}</figcaption>
         <img type="image" name="{{key}}" id="{{ytVid.id}}" class="img-fluid rounded w-100 thumbnail"
             src={{ytVid.thumbnail}} alt="{{ytVid.webpage_url}}">
     </figure>
-    {% else %}
-    <p>Bad vote parameter passed to template</p>
-    {% endif %}
+
     {% endfor %}
 </div>
 {% csrf_token %}

@@ -16,6 +16,7 @@ try:
     from bracket.models import *
 except Exception as e:
     print("couldn't import custom django modules common and models\n", e)
+    raise
 
 dateFormat = '%Y-%m-%dT%H:%M:%S'
 
@@ -35,10 +36,28 @@ def test(request):
     """
     results = runSql( sql = 'select winYtid, count(*) from bracket_vote group by winYtid order by count(*) desc limit 100;')
     getLeaders()
-    return HttpResponse(results)
+    return HttpResponse('hi')
+
+def getLeaders() -> list:
+    """
+    idk what, not working
+    """
+    sql = 'select winYtid, count(*) from bracket_vote group by winYtid order by count(*) desc limit 25;'
+    results = runSql(sql)
+    leaders = []
+    while results:
+        ytId, wins = results.pop()
+        metadatum = metadata[ytId]
+        metadatum['wins'] = wins
+        pprint(metadatum)
+        leaders.append(metadatum)
+    #sql = 'select loseYtid, sum(*) from bracket_vote group by winYtid order by count(*) desc limit 25;'
+    #results = runSql(sql)
+    #for r in results:
+        #do stuff
+    return(leaders)
 
 def vote(request, ytid1 = None, ytid2 = None):
-    #TODO: return more metadata
     if not request.session.session_key:
         request.session['created']=datetime.datetime.now().strftime(dateFormat)
     choices = {}
@@ -50,29 +69,23 @@ def vote(request, ytid1 = None, ytid2 = None):
         'upload_date':{
             'displayName':'Uploaded',
             'transformFunction': lambda x: datetime.datetime.strptime(x,'%Y%m%d').strftime('%Y %b %d'),
-            #'rank':1,
         },
         'duration':{
             'displayName':'Length',
             'transformFunction': lambda x: datetime.timedelta(seconds = x),
-            #'rank':2,
         },
         'view_count':{
             'displayName':'Views',
-            #'rank':3,
         },
         'like_count':{
             'displayName':'Likes',
-            #'rank':4,
         },
         'dislike_count':{
             'displayName':'Dislikes',
-            #'rank':5,
         },
         'webpage_url':{
             'displayName':'link',
             'transformFunction': lambda x: f'<a href="{x}" target="_blank">!-----!</a>',
-            #'rank':6,
         },
     }
     #set a display key in choice dict that will be what shows on the ytInfoTable div 
@@ -145,25 +158,6 @@ def runSql(sql: str,bindVariables: list = None) -> list:
         cur.execute(sql)
         results = cur.fetchall()
         return results
-
-def getLeaders() -> list:
-    """
-    idk what, not working
-    """
-    sql = 'select winYtid, count(*) from bracket_vote group by winYtid order by count(*) desc limit 100;'
-    results = runSql(sql)
-    leaders = []
-    while results:
-        v, count = results.pop()
-        print(v)
-        v = getVideoMetadata(v)
-        pprint(v)
-        leaders.append(v)
-    return(leaders)
-
-
-
-#http://127.0.0.1:8000/vote/LipcFI8tq_I-7H3VhvU_2Aw
 
 if __name__ == '__main__':
     print(getVideoMetadata('c1mhLFuiGeg'))
