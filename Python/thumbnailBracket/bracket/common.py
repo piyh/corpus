@@ -32,6 +32,42 @@ logger.addHandler(sh)
 
 ytJsonDir  = Path(r'C:\Users\Ryan\Desktop\Files\kingcobrajfs')
 
+def equalPlay(refresh=False):
+    normalizedVoteCols = """ ytid,
+                            opponentYtid,
+                            outcome,
+                            voteDatetime,
+                            session,
+                            postingIp"""
+    try:
+        sql = f'select ytid, count(*) from normalizedVotes group by ytid order by count(*);'
+        results=runSql(sql)
+        print(results)
+
+    except:
+        sql = "drop view if exists normalizedVotes"
+        runSql(sql)
+        sql =  f"""
+                create view  normalizedVotes (
+                        {normalizedVoteCols}
+                    ) as
+                select winYtid,
+                    loseYtid,
+                    'win',
+                    substr(timestamp, 0, 19),
+                    session,
+                    postingIp
+                from bracket_vote
+                union all
+                select loseYtid,
+                    winYtid,
+                    'loss',
+                    substr(timestamp, 0, 19),
+                    session,
+                    postingIp
+                from bracket_vote;"""
+        runSql(sql)
+
 #metadata should be an object and these functions should be an object too
 def getAllMetadata(ytJsonDir: Path) -> dict:
     """
@@ -79,11 +115,11 @@ def addMatchHistoryMetadata(metadata:dict, fullHist:bool = False) -> dict:
        also adds winRatio directy to metadata
     """
     columns  = 'ytid opponentYtid outcome voteDatetime session postingIp'
-    wins     = runSql("select winYtid, loseYtid, 'win', substr(timestamp,0,19), session, postingIp from bracket_vote where winYtid=:ytid"
+    wins     = runSql("select winYtid, loseYtid, 'win', substr(timestamp,0,19), session, postingIp from bracket_vote where winYtid=:ytid limit 10;"
                         ,{'ytid':metadata['id']}
                         ,columns
                 )
-    losses   = runSql("select loseYtid, winYtid, 'loss', substr(timestamp,0,19), session, postingIp from bracket_vote where loseYtid=:ytid"
+    losses   = runSql("select loseYtid, winYtid, 'loss', substr(timestamp,0,19), session, postingIp from bracket_vote where loseYtid=:ytid limit 10;"
                         ,{'ytid':metadata['id']}
                         ,columns
                 )
@@ -132,8 +168,13 @@ def metadataDisplayMap(metadata:dict) -> dict:
             'displayName':'Vote Time',
             'transformFunction': lambda x: datetime.datetime.strptime(x,'%Y-%m-%d %H:%M:%S').strftime(datetimeFormat),
         },
+        #'winRatio':{ #TODO: this is a test line in the infoTable
+        #    'displayName':'Stats/Win/Loss/%',
+        #    'transformFunction': lambda x: f'<a href="/stats/{metadata.id}" target="_blank">Stats - </a>',
+        #},
     }
     displayDict = {}
+    print(metadata)
     for k,v in metadata.items():
         if k == 'title':
             title = v
@@ -142,7 +183,7 @@ def metadataDisplayMap(metadata:dict) -> dict:
             continue
         displayName = infoTableMap[k]['displayName']          
 
-        transform = infoTableMap[k].get('transformFunction')
+        transform    = infoTableMap[k].get('transformFunction')
         if transform:
             displayValue = transform(v)
         else:
@@ -165,9 +206,11 @@ def metadataDisplayMap(metadata:dict) -> dict:
     displayDict['link'] = displayDict['link'].replace('!-----!',title)
 
     if metadata.get('winRatio'):
-        displayDict['Wins/Losses/%'] = (f"<span class='text-success'>{metadata['wins']}</span>"
+        displayDict['Stats/Wins/Losses/%'] = (f"<a href='/stats/{metadata['id']}' target='_blank'>Stats</a> - "
+                                        f"<span class='text-success'>{metadata['wins']}</span>"
                                         f"/<span class='text-danger'>{metadata['losses']}</span>"
                                         f"/{metadata['winRatio']}"
+                                        
         )
 
     return displayDict
