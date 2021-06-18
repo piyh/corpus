@@ -28,3 +28,7 @@ class ytVid(models.Model):
     duration= models.IntegerField()
     webpage_url= models.CharField(max_length = 200)
     upload_date= models.CharField(max_length = 200)
+
+class nonce(models.Model):
+    nonce = models.CharField(max_length = 200, primary_key=True)
+    datetime = models.DateTimeField(default = timezone.now)

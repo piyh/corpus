@@ -5,16 +5,21 @@
 
 {% block content %}
 <div class="jumbotron ">
-  <h1 class="display-5">Cobra Thumbnail Tournament</h1>
+  <h1 class="display-5 text-center">Cobra Thumbnail Rankings</h1>
   <p>
     Join the search in finding the cream of the crop, the cardinal cherry of the
     food hack, the cheese pull of the custom Dominos pizza, the best KingCobraJFS thumbnail of them all.
   </p>
+  <p>TODO: make a friendly site map with images so people can navigate from the landing page to all areas of the app without using the hamburger button</p>
   <br />
   <p class="lead"></p>
-  <div>
-    <a class="btn btn-primary btn-lg" href="{% url 'bracket.index' %}" role="button">Vote!</a>
-    <a class="btn btn-primary btn-lg" href="#" role="button">View leaderboards</a>
+  <div class="row">
+    <div class="col-6 text-center">
+      <a class="btn btn-primary btn-lg" href="{% url 'bracket.vote' %}" role="button">Vote!</a>
+    </div>
+    <div class="col-6 text-center">
+      <a class="btn btn-primary btn-lg" href="{% url 'bracket.leaderboard' %}" role="button">Leaderboards</a>
+    </div>
   </div>
 </div>
 <br />

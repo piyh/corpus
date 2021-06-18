@@ -1,8 +1,7 @@
 import datetime
 from pathlib import Path
 from pprint import pformat, pprint
-import sqlite3
-import random
+import secrets
 import datetime
 
 from django.http import HttpResponse
@@ -12,13 +11,18 @@ from django.db import connection
 from urllib.parse import quote
 
 try:
-    from bracket.common import config, channelDir, logger, metadata, getRandYtidMeta
+    from bracket.common import (config, channelDir, 
+                                logger, metadataByYtid, 
+                                getVoteOption, getClientIP, 
+                                runSql, metadataDisplayMap, 
+                                addMatchHistoryMetadata
+                                ,datetimeFormat)
     from bracket.models import *
 except Exception as e:
     print("couldn't import custom django modules common and models\n", e)
     raise
 
-dateFormat = '%Y-%m-%dT%H:%M:%S'
+
 
 def index(request):
     kwargs = {}
@@ -29,8 +33,31 @@ def test(request):
     throw whatever functionality here for debugging
     """
     results = runSql( sql = 'select winYtid, count(*) from bracket_vote group by winYtid order by count(*) desc limit 100;')
-    getLeaders()
-    return HttpResponse('hi')
+    #getLeaders()
+    return HttpResponse(results)
+
+def stats(request, ytid):
+    metadata = metadataByYtid[ytid]
+    metadata = addMatchHistoryMetadata(metadata, fullHist = True)
+    displayMetadata = metadataDisplayMap(metadata)
+    print(metadata)
+    opponentMetadataList = []
+    for match in metadata['matchHistory']:
+        opponentMetadata = metadataByYtid[match.opponentYtid]
+        opponentMetadata['outcome'] = match.outcome
+        opponentMetadata['voteDatetime'] = match.voteDatetime
+        opponentMetadata['displayMetadata'] = metadataDisplayMap(opponentMetadata)
+        opponentMetadataList.append(opponentMetadata)
+    del metadata['matchHistory']
+    context = {'ytVid':metadataByYtid[ytid],
+               'ytMetadata': displayMetadata,
+                'opponentMetadataList':opponentMetadataList,
+    }
+    print(context)
+    #import pdb; pdb.set_trace()
+    #template = if match then show thumbnail and win/loss
+    #each thumbnail links to stats for that one
+    return render(request, 'stats.html', context)
 
 def leaderboard(request, resultLimit:int = 24) -> list:
     """
@@ -42,73 +69,29 @@ def leaderboard(request, resultLimit:int = 24) -> list:
 
     leaders = []
     for ytId, wins in results:        
-        metadatum = metadata[ytId]
-        metadatum['wins'] = wins
-        leaders.append(metadatum)
-    leaders = [(rank + 1, metadatum, metadatumDisplayMap(metadatum)) for rank,metadatum in enumerate(leaders)]
+        metadata = metadataByYtid[ytId]
+        metadata['wins'] = wins
+        leaders.append(metadata)
+    leaders = [(rank + 1, metadata, metadataDisplayMap(addMatchHistoryMetadata(metadata))) for rank,metadata in enumerate(leaders)]
     kwargs = {}
     kwargs['leaders'] = leaders
     return render(request, 'leaderboard.html',kwargs)
 
-def metadatumDisplayMap(metadatum:dict) -> dict:
-    """takes an info json and returns a new dict that has display values for the ytVidMetaTable.html include"""
-    infoTableMap = {
-        'upload_date':{
-            'displayName':'Uploaded',
-            'transformFunction': lambda x: datetime.datetime.strptime(x,'%Y%m%d').strftime('%Y %b %d'),
-        },
-        'duration':{
-            'displayName':'Length',
-            'transformFunction': lambda x: datetime.timedelta(seconds = x),
-        },
-        'view_count':{
-            'displayName':'Views',
-        },
-        'like_count':{
-            'displayName':'Likes',
-        },
-        'dislike_count':{
-            'displayName':'Dislikes',
-        },
-        'webpage_url':{
-            'displayName':'link',
-            'transformFunction': lambda x: f'<a href="{x}" target="_blank">!-----!</a>',
-        },
-    }
-    displayDict = {}
-    for k,v in metadatum.items():
-        if k == 'title':
-            title = v
-            continue
-        if not infoTableMap.get(k):
-            continue
-        displayName = infoTableMap[k]['displayName']          
-
-        transform = infoTableMap[k].get('transformFunction')
-        if transform:
-            displayValue = transform(v)
-        else:
-            displayValue = v
-        displayDict[displayName] = displayValue
-    
-    #after transforming the display value, make the anchor inner text be the video title
-    displayDict['link'] = displayDict['link'].replace('!-----!',title)
-    return displayDict
-
 def vote(request, ytid1 = None, ytid2 = None):
     if not request.session.session_key:
-        request.session['created']=datetime.datetime.now().strftime(dateFormat)
+        request.session['created']=datetime.datetime.now().strftime(datetimeFormat)
     choices = {}
-    choices['left'] =  getRandYtidMeta()
+    #TODO: choices is a dict and probably should be a list, template would need to change
+    choices['left'] =  addMatchHistoryMetadata(getVoteOption())
     choices['vs'] = 'vs'
-    choices['right'] = getRandYtidMeta()
+    choices['right'] = addMatchHistoryMetadata(getVoteOption())
     context = {'choices':choices}    
 
     #set a display key in choice dict that will be what shows on the ytVidMetaTable div 
     for choice in context['choices'].values():
         if choice == 'vs':
             continue        
-        choice['ytMetadata'] = metadatumDisplayMap(choice)
+        choice['displayMetadata'] = metadataDisplayMap(choice)
     #choices = intersperse(choices, 'vs')
     if request.method == 'GET':
         response = render(request, 'vote.html', context)
@@ -124,41 +107,17 @@ def vote(request, ytid1 = None, ytid2 = None):
         vote.save()
         print(vote)
         response = render(request, 'voteContainer.html', context)
-
+    #TODO: add a vote history thing to vote screen that links to a full history screen and shows recent votes
+    #context['lastVotes'] = runSql("""select
+    #                                         winYtid
+    #                                        ,loseYtid  
+    #                                   from vote 
+    #                                   where session = :sessionId
+    #                                   limit 5;"""
+    #                            , request.session.session_key
+    #                            , 'Winner Loser'
+    #                            )
     return response  
 
-def getClientIP(request):
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]
-    else:
-        ip = request.META.get('REMOTE_ADDR')
-    return ip
-
-
-def runSql(sql: str,bindVariables: list = None) -> list:
-    """
-    runs sql that should be read only against the django sqlite db.  
-    Can take bind variables in the standard sqlite3 module styles.
-    """
-    with sqlite3.connect('db.sqlite3') as con:
-        cur = con.cursor() 
-            # bind style
-            #cur.execute("select * from lang where first_appeared=:year", {"year": 1972})
-
-            # The qmark style used with executemany():
-            #lang_list = [
-            #    ("Fortran", 1957),
-            #    ("Python", 1991),
-            #    ("Go", 2009),
-            #]
-            #cur.executemany("insert into lang values (?, ?)", lang_list)
-        args = [sql]
-        if bindVariables:
-            args.append(bindVariables)
-        cur.execute(*args)
-        results = cur.fetchall()
-        return results
-        
 if __name__ == '__main__':
     print(getVideoMetadata('c1mhLFuiGeg'))

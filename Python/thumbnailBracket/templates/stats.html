@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="stats-container" class="row">
+    <h5 class="display-5 text-center">{{ytVid.title}}</h1>
+        <hr class="" />
+        <figure class="col-md-9">
+            <img type="image" name="{{key}}" id="{{ytVid.id}}" class="img-fluid rounded w-100 thumbnail"
+                src={{ytVid.thumbnail}} alt="{{ytVid.webpage_url}}">
+        </figure>
+        {% include "ytVidMetaTable.html" with ytMetadata=ytMetadata colLen=3 %}
+        <hr />
+        {% for opponentMetadata in opponentMetadataList %}
+        <p>{{opponentMetadata}}</p>
+        <figure class="col-xs-6 col-md-1 p-0  my-auto mx-auto">
+            {% if opponentMetadata.outcome == 'win' %}
+            <img src="{% static 'win.png' %}" class="mx-auto img-fluid " alt="win" style="max-width: 20;">
+            <figcaption class="text-center text-success">{{opponentMetadata.outcome}}</figcaption>
+            {% elif opponentMetadata.outcome == 'loss' %}
+            <img src="{% static 'loss.png' %}" class="mx-auto img-fluid" alt="loss" style="max-width: 20;">
+            <figcaption class="text-center text-danger">{{opponentMetadata.outcome}}</figcaption>
+            {% else %}
+            <p>error on win loss image</p>
+            {% endif %}
+            
+
+        </figure>
+        <div class="col-xs-6 col-md-1 p-0 my-auto mx-auto">
+            <img src="{% static 'vs.png' %}" class="mx-auto img-fluid d-block w-10" alt="vs" style="max-width: 20;">
+        </div>
+
+        <figure class="col-md-7">
+            <figcaption class="text-center pb-1 lead">{{opponentMetadata.title}}</figcaption>
+            <img type="image" name="{{key}}" id="{{opponentMetadata.id}}" class="img-fluid rounded w-100 thumbnail"
+                src={{opponentMetadata.thumbnail}} alt="{{opponentMetadata.webpage_url}}">
+        </figure>
+        {% include "ytVidMetaTable.html" with ytMetadata=opponentMetadata.displayMetadata colLen=3 %}
+
+        <!--{% for k,v in opponentMetadata.items %}
+                    {% if k == winLoss %}
+                        {{winLoss}}
+                        {% if winLoss == 'win' %}
+                        {% elif winLoss == 'loss' %}
+                        {% else %}
+                        <p>error on </p>
+                        {% endif %}
+                    {if k == vote}
+                    {% include "ytVidMetaTable.html" with ytMetadata=opponentMetadata colLen=3 %}
+                    {% endif %}
+                    
+                
+                {% endfor %}-->
+
+        {% endfor %}
+</div>
+{% endblock %}

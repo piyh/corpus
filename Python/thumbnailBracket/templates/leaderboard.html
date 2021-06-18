@@ -2,11 +2,18 @@
 {% load static %}
 {% block title %}TMDWU{% endblock %}
 {% block content %}
-<div class="jumbotron ">
+<div class="jumbotron text-center">
+    
+    
     <h1 class="display-5">Best of the Boglim</h1>
-    <p> These are what's up, best first </p>
+    <p class="m-1">These are what's up, dankest listed first.</p>
+    <p class="m-1">Click an image to view its matchup history</p>
+    <button data-bs-toggle="collapse" data-bs-target=".multi-collapse" type="button" 
+        class="btn btn-sm btn-outline-secondary mt-2">
+        Toggle Video Stats
+    </button>  
+    <hr>
 </div>
-
 
 <div class="row">
     <!--I'm using this loop just for two choices because I want this to be extensible to a 16 thumbnail bracket -->
@@ -17,16 +24,17 @@
                 <figcaption class="text-center pb-1">{{metadata.title}}</figcaption>
             </div>
         </div>
-        <img type="image" name="{{key}}" id="{{metadata.id}}" class="img-fluid rounded w-100 thumbnail"
-            src={{metadata.thumbnail}} alt="{{metadata.webpage_url}}">
-        <div class="row">
-            {% include "ytVidMetaTable.html" with ytMetadatum=displayMetadata colLen=12 %}
+        <a href="/stats/{{metadata.id}}">
+            <img type="image" name="{{key}}" id="{{metadata.id}}" 
+                class="img-fluid rounded w-100 thumbnail"
+                src={{metadata.thumbnail}} alt="{{metadata.webpage_url}}" >
+        </a>
+
+        <div id="metadata{{ forloop.counter }}" class="collapse row multi-collapse">
+            {% include "ytVidMetaTable.html" with ytMetadata=displayMetadata colLen=12 %}
         </div>
     </figure>
-
-
     {% endfor %}
 </div>
 {% csrf_token %}
-
 {% endblock %}
