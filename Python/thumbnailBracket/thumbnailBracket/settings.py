@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import secrets
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,9 +21,28 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open('secret.txt') as s:
-    secret = s.read()
-SECRET_KEY = secret
+SECRET_KEY = None
+try:
+    #try to find a local secret file first
+    with open('secret.txt') as s:
+        secret = s.read()
+    SECRET_KEY = secret
+    print('loaded secret key from file')
+except FileNotFoundError:
+    print("couldn't find a secret file, going to look for environment variable")
+
+if not SECRET_KEY:
+    try:
+        os.environ['SECRET_KEY']
+        print('loaded secret key from env')
+    except KeyError:
+        print("couldn't find an environment variable with the django secret, generating random")
+        print("THIS WILL BREAK EXISTING SESSIONS!!!")
+
+if not SECRET_KEY:
+    print("generated new secret key")
+    SECRET_KEY = secrets.token_urlsafe(50)
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
