@@ -22,7 +22,8 @@ except Exception as e:
     print("couldn't import custom django modules common and models\n", e)
     raise
 
-
+with open('sql/leaderboardQuery.sql','r') as f:
+    leaderboardQuery = f.read()
 
 def index(request):
     kwargs = {}
@@ -60,14 +61,17 @@ def stats(request, ytid):
     return render(request, 'stats.html', context)
 
 def leaderboard(request, resultLimit:int = 24) -> list:
+    global leaderboardQuery
     """
     TODO: docstring
     """
     params = {'resultLimit':resultLimit }
-    sql = 'select winYtid, count(*) from bracket_vote group by winYtid order by count(*) desc limit :resultLimit;'
-    results = runSql(sql,params)
+
+    #sql = 'select winYtid, count(*) from bracket_vote group by winYtid order by count(*) desc limit :resultLimit;'
+    results = runSql(leaderboardQuery,params)
 
     leaders = []
+    print(results[0])
     for ytId, wins in results:        
         metadata = metadataByYtid[ytId]
         metadata['wins'] = wins
@@ -78,6 +82,8 @@ def leaderboard(request, resultLimit:int = 24) -> list:
     return render(request, 'leaderboard.html',kwargs)
 
 def vote(request, ytid1 = None, ytid2 = None):
+    #TODO: Voting needs to update the wins/losses in metadataByYtid
+    #TODO: need to make metadataByYtid a database thing instead of all in memory
     if not request.session.session_key:
         request.session['created']=datetime.datetime.now().strftime(datetimeFormat)
     choices = {}
@@ -87,6 +93,9 @@ def vote(request, ytid1 = None, ytid2 = None):
     choices['right'] = addMatchHistoryMetadata(getVoteOption())
     context = {'choices':choices}    
 
+    while choices['right'] == choices['left']:
+        choices['right'] = addMatchHistoryMetadata(getVoteOption())
+        4443
     #set a display key in choice dict that will be what shows on the ytVidMetaTable div 
     for choice in context['choices'].values():
         if choice == 'vs':
@@ -100,6 +109,7 @@ def vote(request, ytid1 = None, ytid2 = None):
         vote = Vote (**{
             'loseYtid': request.POST['lose'],
             'winYtid': request.POST['win'],
+            'ytChannel': 'KingCobraJFS',
             'postingIP': getClientIP(request), 
             'session': request.session.session_key,
         })

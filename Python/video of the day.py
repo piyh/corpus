@@ -2,7 +2,9 @@ from pathlib import Path
 from datetime import datetime
 import random
 
-jfsDir = Path('D:/kingcobrajfs')
+jfsDirs = (Path('D:/kingcobrajfs'),Path('C:/Users/Ryan/Desktop/Files/kingcobrajfs'))
+
+jfsDir = [x for x in jfsDirs if x.exists()][0]
 
 now = datetime.now()
 found = []
