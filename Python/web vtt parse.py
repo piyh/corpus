@@ -5,12 +5,17 @@ import webvtt
 
 os.chdir("C:/Users/Ryan/Desktop/Files/kingcobrajfs")
 
+outfile = Path('outputLinks.txt')
+
 lastCap = ""
 minuteCache = 0
 
 targetVTT = ''
-findString = 'ripping ass'
+findString = 'smells good'
 fileList = [name for name in os.listdir('.') if os.path.isfile(name) and ".vtt" in name and targetVTT in name]
+
+o = open(outfile,'w', encoding='utf-8')
+
 
 with open('transcript', 'w') as f:
     for vtt in fileList:
@@ -58,7 +63,11 @@ with open('transcript', 'w') as f:
                 #minute = caption.start[3:5]
                 #second = caption.start[6:8]
                 #videoID = vttName[-18:-7]
-                print(f'[{caption.text}](https://www.youtube.com/watch?v={videoID}&t={hour}h{minute}m{second}s)')
+                
+                link = f'[{caption.text}](https://www.youtube.com/watch?v={videoID}&t={hour}h{minute}m{second}s)'
+                o.write(link)
+                o.write('\n')
+                print(link)
                 print('\n')
 
             if int(minute) % 2 ==0 and minute != minuteCache:

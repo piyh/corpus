@@ -11,14 +11,17 @@ import datetime
 dateFormat = '%Y-%b-%d'
 datetimeFormat = '%Y-%b-%d %H:%M:%S'
 
-configPath = Path('C:/Users/Ryan/Desktop/Files/corpus/Python/thumbnailBracket/bracket/config.ini')
-if not configPath.exists():
-    raise FileNotFoundError('Config file not found')
 
-config = ConfigParser()
-config.read(configPath)
-channelDir = Path(config['globals']['channelDirectory'])
-thumbnailExtensions = {'.webp','.jpg'}
+configPath = Path('C:/Users/Ryan/Desktop/Files/corpus/Python/thumbnailBracket/bracket/config.ini')
+if configPath.exists():
+    config = ConfigParser()
+    config.read(configPath)
+    channelDir = Path(config['globals']['channelDirectory'])
+else:
+    channelDir = Path('/mnt/videoMetadata')
+    if not channelDir.exists():
+        raise FileNotFoundError('Config file not found')
+#thumbnailExtensions = {'.webp','.jpg'}
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
