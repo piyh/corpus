@@ -40,6 +40,7 @@ logger.addHandler(sh)
 
 ytJsonDirs  = (Path(r'C:\Users\Ryan\Desktop\Files\kingcobrajfs'),Path('/mnt/videoMetadata'))
 ytJsonDir = [x for x in ytJsonDirs if x.exists()][0]
+logger.debug(ytJsonDir)
 
 def getEqualPlayData():
     """
