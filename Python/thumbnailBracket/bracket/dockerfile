@@ -1,13 +1,14 @@
 FROM python:3.9
 
 ENV DockerHome=/home/app/tmdwu
-RUN mkdir -p /mnt/videoMetadata
 WORKDIR $DockerHome
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 RUN pip install --upgrade pip
 COPY . ./
+RUN pip install -r requirements.txt
+RUN mkdir -p /mnt/videoMetadata
+
 EXPOSE 80
 EXPOSE 443
-RUN pip install -r requirements.txt
 CMD python manage.py runserver

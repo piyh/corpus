@@ -20,10 +20,10 @@ if configPath.exists():
 else:
     channelDir = Path('/mnt/videoMetadata')
     if not channelDir.exists():
-        raise FileNotFoundError('/mnt/videoMetadata dir not found')
+        raise FileNotFoundError(f'{channelDir.filename} dir not found')
     children = [x for x in channelDir.iterdir()]
     if not children:
-        raise Exception('no metadata found in /mnt/videoMetadata, did you remember to mount the info jsons from youtube-dl?')
+        raise Exception(f'no metadata found in {channelDir.filename}, did you remember to mount the info jsons from youtube-dl?')
 
 
 #thumbnailExtensions = {'.webp','.jpg'}
@@ -38,7 +38,8 @@ sh.setFormatter(formatter)
 logger.addHandler(fh)
 logger.addHandler(sh)
 
-ytJsonDir  = Path(r'C:\Users\Ryan\Desktop\Files\kingcobrajfs')
+ytJsonDirs  = (Path(r'C:\Users\Ryan\Desktop\Files\kingcobrajfs'),Path('/mnt/videoMetadata'))
+ytJsonDirs = [x for x in ytJsonDirs if x.exists()][0]
 
 def getEqualPlayData():
     """
