@@ -20,10 +20,10 @@ if configPath.exists():
 else:
     channelDir = Path('/mnt/videoMetadata')
     if not channelDir.exists():
-        raise FileNotFoundError(f'{channelDir.filename} dir not found')
+        raise FileNotFoundError(f'{channelDir.name} dir not found')
     children = [x for x in channelDir.iterdir()]
     if not children:
-        raise Exception(f'no metadata found in {channelDir.filename}, did you remember to mount the info jsons from youtube-dl?')
+        raise Exception(f'no metadata found in {channelDir.name}, did you remember to mount the info jsons from youtube-dl?')
 
 
 #thumbnailExtensions = {'.webp','.jpg'}
