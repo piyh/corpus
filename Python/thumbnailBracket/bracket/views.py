@@ -10,8 +10,7 @@ from django.db import connection
 from urllib.parse import quote
 
 try:
-    from bracket.common import (config, channelDir, 
-                                logger, metadataByYtid, 
+    from bracket.common import (logger, metadataByYtid, 
                                 getVoteOption, getClientIP, 
                                 runSql, metadataDisplayMap, 
                                 addMatchHistoryMetadata
@@ -129,4 +128,4 @@ def vote(request, ytid1 = None, ytid2 = None):
     return response  
 
 if __name__ == '__main__':
-    print(getVideoMetadata('c1mhLFuiGeg'))
+    pass
