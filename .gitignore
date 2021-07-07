@@ -9,3 +9,4 @@ __pycache__
 secret.txt
 **/*.sqlite3
 migrations
+Python/thumbnailBracket/.env
