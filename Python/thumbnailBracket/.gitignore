@@ -1,2 +1,4 @@
 bracket/static/thumbnails
 .venv
+database
+migrations

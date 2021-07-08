@@ -8,5 +8,5 @@ __pycache__
 *.log
 secret.txt
 **/*.sqlite3
-migrations
 Python/thumbnailBracket/.env
+migrations

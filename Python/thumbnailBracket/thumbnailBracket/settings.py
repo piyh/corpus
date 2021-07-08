@@ -33,7 +33,7 @@ except FileNotFoundError:
 
 if not SECRET_KEY:
     try:
-        os.environ['SECRET_KEY']
+        SECRET_KEY = os.environ['SECRET_KEY']
         print('loaded secret key from env')
     except KeyError:
         print("couldn't find an environment variable with the django secret, generating random")
@@ -47,12 +47,12 @@ if not SECRET_KEY:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.tmdwu.com', '192.168.0.46', '127.0.0.1']
+ALLOWED_HOSTS = ['.tmdwu.com', '192.168.0.46', '127.0.0.1','0.0.0.0']#TODO: remove 0.0.0.0
 
 # Application definition
 
 INSTALLED_APPS = [
-    'bracket.apps.BracketConfig',
+    'bracket',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -94,18 +94,20 @@ WSGI_APPLICATION = 'thumbnailBracket.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+DB_DIR = Path('/mnt/database')#TODO: clean this base dir shit up
+
+if not Path(DB_DIR).exists():
+    DB_DIR = BASE_DIR
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': DB_DIR / 'db.sqlite3',
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -121,29 +123,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'America/Chicago'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 SESSION_COOKIE_AGE = 3144960000

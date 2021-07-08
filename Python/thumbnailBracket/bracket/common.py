@@ -7,10 +7,17 @@ import json
 import sqlite3
 from collections import namedtuple
 import datetime
+import os
 
-dateFormat = '%Y-%b-%d'
-datetimeFormat = '%Y-%b-%d %H:%M:%S'
-
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+fh = logging.FileHandler('django.log')
+sh = logging.StreamHandler(sys.stdout)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+fh.setFormatter(formatter)
+sh.setFormatter(formatter)
+logger.addHandler(fh)
+logger.addHandler(sh)
 
 configPath = Path('C:/Users/Ryan/Desktop/Files/corpus/Python/thumbnailBracket/bracket/config.ini')
 if configPath.exists():
@@ -23,24 +30,14 @@ else:
         raise FileNotFoundError(f'{channelDir.name} dir not found')
     children = [x for x in channelDir.iterdir()]
     if not children:
-        raise Exception(f'no metadata found in {channelDir.name}, did you remember to mount the info jsons from youtube-dl?')
-
-
-#thumbnailExtensions = {'.webp','.jpg'}
-
-logger = logging.getLogger()
-logger.setLevel(logging.DEBUG)
-fh = logging.FileHandler('django.log')
-sh = logging.StreamHandler(sys.stdout)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-fh.setFormatter(formatter)
-sh.setFormatter(formatter)
-logger.addHandler(fh)
-logger.addHandler(sh)
+        logger.warning(f'no metadata found in {channelDir.name}, did you remember to mount the info jsons from youtube-dl?')
 
 ytJsonDirs  = (Path(r'C:\Users\Ryan\Desktop\Files\kingcobrajfs'),Path('/mnt/videoMetadata'))
 ytJsonDir = [x for x in ytJsonDirs if x.exists()][0]
 logger.debug(f'{ytJsonDir=}')
+
+dateFormat = '%Y-%b-%d'
+datetimeFormat = '%Y-%b-%d %H:%M:%S'
 
 def getEqualPlayData():
     """
@@ -101,14 +98,19 @@ def getVoteOption() -> dict:
     ytids = list(metadataByYtid.keys())
     
     votes = getEqualPlayData()
-    voteIDs = [x.ytid for x in votes]
-    unvotedIDs = set(ytids) - set(voteIDs)
-    if unvotedIDs:
-        return metadataByYtid[random.choice(list(unvotedIDs))]
+    if not votes:
+        return metadataByYtid[random.choice(ytids)]
+    elif votes :
+        voteIDs = [x.ytid for x in votes]
+        unvotedIDs = set(ytids) - set(voteIDs)
+        if unvotedIDs:
+            return metadataByYtid[random.choice(list(unvotedIDs))]
+        else:
+            weightedChoice = random.randint(0,int(len(votes)*.1))
+            ytid = votes[weightedChoice].ytid
+            return metadataByYtid[ytid]
     else:
-        weightedChoice = random.randint(0,int(len(votes)*.1))
-        ytid = votes[weightedChoice].ytid
-        return metadataByYtid[ytid]
+        raise Exception('missed outcome on if block')
     #rando = random.choice(ytids)
     #return rando
 #metadata should be an object and these functions should be an object too
