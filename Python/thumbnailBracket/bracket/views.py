@@ -69,7 +69,6 @@ def leaderboard(request, resultLimit:int = 24) -> list:
     results = runSql(leaderboardQuery,params)
 
     leaders = []
-    print(results[0])
     for ytId, wins in results:        
         metadata = metadataByYtid[ytId]
         metadata['wins'] = wins
