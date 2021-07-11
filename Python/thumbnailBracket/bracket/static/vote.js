@@ -3,6 +3,7 @@ var left = document.getElementsByName("left")[0];
 var right = document.getElementsByName("right")[0];
 
 function voteClick(e) {
+  document.getElementById("vs").innerHTML = '<div class="spinner-border text-primary" role="status"> <span class="sr-only">Loading...</span></div>'
   console.log("event on " + e.target.name);
   e.preventDefault();
   data = new FormData(voteForm);

@@ -1,0 +1,19 @@
+git clone https://github.com/piyh/corpus.git
+
+sudo su
+
+cd /mnt/Files/corpus/Python/thumbnailBracket/
+
+docker build --pull -t tmdwu:1.0 .
+
+docker run \
+	-t -i  \
+	--env-file /mnt/Files/corpus/Python/thumbnailBracket/.env \
+	-p 8000:8000 \
+	--mount type=bind,source=/mnt/Files/kingcobrajfs,target=/mnt/videoMetadata \
+	--mount type=bind,source=/mnt/Files/corpus/Python/thumbnailBracket/database,target=/mnt/database \
+	tmdwu:1.0 
+
+
+
+#	--restart unless-stopped \

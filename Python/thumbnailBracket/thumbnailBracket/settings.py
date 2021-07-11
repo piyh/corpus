@@ -91,20 +91,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'thumbnailBracket.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DB_DIR = Path('/mnt/database')#TODO: clean this base dir shit up
-
 if not Path(DB_DIR).exists():
-    DB_DIR = BASE_DIR
-
+    DB_DIR = BASE_DIR / 'database'
+print(f'{DB_DIR=}')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': DB_DIR / 'db.sqlite3',
     }
 }
+print(f'{DB_DIR=}')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

@@ -6,6 +6,7 @@ import sys
 import json
 import sqlite3
 from collections import namedtuple
+from django.db import connection
 import datetime
 import os
 
@@ -314,13 +315,20 @@ def runSql(sql:str, bindVariables:list = None, tupleLabels:str = '') -> list:
     Can take bind variables in the standard sqlite3 module styles.
     tupleLabels is optional and is a space delimited list
     """
-    with sqlite3.connect('db.sqlite3') as con:
+    with connection.cursor() as cursor:
+        desc = cursor.description
+        args =[sql]
+        if bindVariables:
+            args.append(bindVariables)
         if tupleLabels:
-            def namedtuple_factory(cursor, row):
-                dbRec = namedtuple('dbRec', tupleLabels)
-                return dbRec(*row)
-            con.row_factory = namedtuple_factory
-        cur = con.cursor() 
+            dbRec = namedtuple('dbRec', tupleLabels.split(' '))
+            return [dbRec(*row) for row in cursor.execute(*args)]
+        #if tupleLabels:
+        #    def namedtuple_factory(cursor, row):
+        #        dbRec = namedtuple('dbRec', tupleLabels)
+        #        return dbRec(*row)
+        #    con.row_factory = namedtuple_factory
+        #cur = con.cursor() 
             # bind style
             #cur.execute("select * from lang where first_appeared=:year", {"year": 1972})
 
@@ -331,9 +339,11 @@ def runSql(sql:str, bindVariables:list = None, tupleLabels:str = '') -> list:
             #    ("Go", 2009),
             #]
             #cur.executemany("insert into lang values (?, ?)", lang_list)
-        args = [sql]
-        if bindVariables:
-            args.append(bindVariables)
-        cur.execute(*args)
-        results = cur.fetchall()
+        #args = [sql]
+        #if bindVariables:
+        #    args.append(bindVariables)
+        #cur.execute(*args)
+        else:
+            results = cursor.execute(*args)
+        results = cursor.fetchall()
         return results

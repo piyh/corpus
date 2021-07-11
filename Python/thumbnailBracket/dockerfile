@@ -9,11 +9,11 @@ COPY . ./
 RUN pip install -r requirements.txt
 RUN mkdir -p /mnt/videoMetadata
 RUN mkdir -p /mnt/database
+RUN rm -rf bracket/migrations
+#EXPOSE 80
+#EXPOSE 443
+#EXPOSE 8000
 
-EXPOSE 80
-EXPOSE 443
-EXPOSE 8000
-
-RUN python manage.py makemigrations
-RUN python manage.py migrate
-CMD python manage.py runserver
+#RUN python manage.py makemigrations
+#RUN python manage.py migrate
+CMD python manage.py runserver 0.0.0.0:8000
