@@ -3,6 +3,8 @@ from pathlib import Path
 from pprint import pformat, pprint
 import datetime
 
+from django.core.cache import caches
+from django.views.decorators.cache import cache_control, cache_page
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.urls.resolvers import LocalePrefixPattern #urlencode, 
@@ -23,6 +25,7 @@ except Exception as e:
 with open('sql/leaderboardQuery.sql','r') as f:
     leaderboardQuery = f.read()
 
+@cache_page(60 * 15)
 def index(request):
     kwargs = {}
     return render(request, 'index.html',kwargs)
@@ -35,11 +38,12 @@ def test(request):
     #getLeaders()
     return HttpResponse(results)
 
+@cache_page(60*1)
 def stats(request, ytid):
     metadata = metadataByYtid[ytid]
     metadata = addMatchHistoryMetadata(metadata, fullHist = True)
     displayMetadata = metadataDisplayMap(metadata)
-    print(metadata)
+    #print(metadata)
     opponentMetadataList = []
     for match in metadata['matchHistory']:
         opponentMetadata = metadataByYtid[match.opponentYtid]
@@ -58,6 +62,7 @@ def stats(request, ytid):
     #each thumbnail links to stats for that one
     return render(request, 'stats.html', context)
 
+@cache_page(60 * 1)
 def leaderboard(request, resultLimit:int = 24) -> list:
     global leaderboardQuery
     """
@@ -78,11 +83,22 @@ def leaderboard(request, resultLimit:int = 24) -> list:
     kwargs['leaders'] = leaders
     return render(request, 'leaderboard.html',kwargs)
 
+@cache_control(private=True)
 def vote(request, ytid1 = None, ytid2 = None):
     #TODO: Voting needs to update the wins/losses in metadataByYtid
     #TODO: need to make metadataByYtid a database thing instead of all in memory
     if not request.session.session_key:
         request.session['created']=datetime.datetime.now().strftime(datetimeFormat)
+    """
+        >>> caches['default'].set('key', 'value', 60)  # 60 seconds
+        >>> caches['default'].get('key')
+        'value
+        >>> caches['idempotent_tokens'].set(uuid, datetime.datetime.now().strftime('%Y%m%dT%H%M%S'))
+        >>> if caches['idempotent_tokens'].get(uuid):
+        >>>     duplicate request
+        >>> else:
+        >>>     valid request
+    """
     choices = {}
     #TODO: choices is a dict and probably should be a list, template would need to change
     choices['left'] =  addMatchHistoryMetadata(getVoteOption())

@@ -96,7 +96,6 @@ WSGI_APPLICATION = 'thumbnailBracket.wsgi.application'
 DB_DIR = Path('/mnt/database')#TODO: clean this base dir shit up
 if not Path(DB_DIR).exists():
     DB_DIR = BASE_DIR / 'database'
-print(f'{DB_DIR=}')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -104,6 +103,27 @@ DATABASES = {
     }
 }
 print(f'{DB_DIR=}')
+
+CACHES = {
+    'idempotent_tokens': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'idempotent_tokens',
+        'TIMEOUT': 60*60*24, #s * m * h 
+        'OPTIONS': {
+            'MAX_ENTRIES': 100000
+        },
+        
+    },
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'default_cache',
+        'TIMEOUT': 60*60*8, #s * m * h 
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000
+        },
+    },
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

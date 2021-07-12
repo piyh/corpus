@@ -14,6 +14,17 @@ RUN rm -rf bracket/migrations
 #EXPOSE 443
 #EXPOSE 8000
 
+#TODO: install cron and make sure cron file is copied to correct dir
+    #Cron will run youtube-dl to metadata folder hourly
+    #cron will run leaderboard refresh every minute
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+		cron \
+        # package#2 \
+	&& rm -rf /var/lib/apt/lists/*
+
 #RUN python manage.py makemigrations
 #RUN python manage.py migrate
+#RUN python manage.py createcachetable
+
 CMD python manage.py runserver 0.0.0.0:8000
