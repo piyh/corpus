@@ -13,42 +13,40 @@
             <hr />
     </div>
     <p class="text-center">
-    {% if opponentMetadataList %}
+    {% if opponentList %}
         Click thumbnails to view their matchup history
     {% else %}
         No votes on this thumbnail
     {% endif %}
     </p>
-    {% for opponentMetadata in opponentMetadataList %}
+    {% for opponent in opponentList %}
         <div class="row" name="matchup">
             <hr />
             <figure class="col-6 col-md-1 p-5 p-md-1 my-auto mx-auto">
-                {% if opponentMetadata.outcome == 'win' %}
+                {% if opponent.outcome == 'W' %}
                 <img src="{% static 'win.png' %}" class="img-fluid" alt="win" style="max-width: 50;">
-                <figcaption class="text-center text-success">{{opponentMetadata.outcome}}</figcaption>
-                {% elif opponentMetadata.outcome == 'loss' %}
+                <figcaption class="text-center text-success">Won</figcaption>
+                {% elif opponent.outcome == 'L' %}
                 <img src="{% static 'loss.png' %}" class="img-fluid" alt="loss" style="max-width: 50;">
-                <figcaption class="text-center text-danger">{{opponentMetadata.outcome}}</figcaption>
+                <figcaption class="text-center text-danger">Lost</figcaption>
                 {% else %}
                 <p>error on win loss image</p>
                 {% endif %}
-
-
             </figure>
             <div class="col-6 col-md-1 p-5 p-md-3 my-auto mx-auto">
                 <img src="{% static 'vs.png' %}" class="img-fluid" alt="vs" style="max-width: 20;">
             </div>
 
             <figure class="col-12 col-md-7">
-                <figcaption class="text-center pb-1 lead">{{opponentMetadata.title}}</figcaption>
-                <a href="/stats/{{opponentMetadata.id}}">
+                <figcaption class="text-center pb-1 lead">{{opponent.title}}</figcaption>
+                <a href="/stats/{{opponent.id}}">
                     <!--#TODO use template url instead of /stats/ hard code-->
-                    <img type="image" name="{{opponentMetadata.id}}" id="{{opponentMetadata.id}}"
-                        class="img-fluid rounded w-100 thumbnail" src={{opponentMetadata.thumbnail}}
-                        alt="{{opponentMetadata.webpage_url}}">
+                    <img type="image" name="{{opponent.id}}" id="{{opponent.id}}"
+                        class="img-fluid rounded w-100 thumbnail" src={{opponent.thumbnail}}
+                        alt="{{opponent.webpage_url}}">
                 </a>
             </figure>
-            {% include "ytVidMetaTable.html" with ytMetadata=opponentMetadata.displayMetadata colLen=3 %}
+            {% include "ytVidMetaTable.html" with ytMetadata=opponent.displayMetadata colLen=3 %}
 
         </div>
     {% endfor %}

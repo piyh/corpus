@@ -1,37 +1,38 @@
+--TODO: this needs to be rewritten once ELO rankings are implemented
 select 
-    coalesce(w.ytid, l.ytid) as ytid
+    coalesce(w.ytVid_id, l.ytVid_id) 
     ,coalesce(wincount, 0) / cast(appearances as float) as winRatio
 --    ,coalesce(wincount, 0) as winCount
 --    ,a.appearances
 from (
     select 
-        ytid
+        ytVid_id
         ,count(*) as appearances
-    from normalizedVotes 
+    from bracket_bettervote 
     group by
-        ytid
+        ytVid_id
 ) a
 left join (
     select 
-        ytid
+        ytVid_id
         ,outcome
         ,count(*) as wincount
-    from normalizedVotes 
-    where outcome = 'win'
+    from bracket_bettervote
+    where outcome = 'W'
     group by
-        ytid
+        ytVid_id
         ,outcome
-) w on a.ytid = w.ytid
+) w on a.ytVid_id = w.ytVid_id
 left join (
     select 
-        ytid
+        ytVid_id
         ,outcome
         ,count(*)  as losscount
-    from normalizedVotes 
-    where outcome = 'loss'
+    from bracket_bettervote
+    where outcome = 'L'
     group by
-        ytid
+        ytVid_id
         ,outcome
-) l on a.ytid = l.ytid
+) l on a.ytVid_id = l.ytVid_id
 order by (coalesce(wincount, 0) / cast(appearances as float)) desc, appearances desc
 limit :resultLimit;

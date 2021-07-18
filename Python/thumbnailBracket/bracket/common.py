@@ -1,3 +1,4 @@
+from bracket.models import YtVid
 from pathlib import Path
 from configparser import ConfigParser
 import logging
@@ -9,6 +10,7 @@ from collections import namedtuple
 from django.db import connection
 import datetime
 import os
+from .models import *
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
@@ -96,22 +98,29 @@ def getVoteOption() -> dict:
     """
     TODO: make this a fair choice, don't let randomness allow a picture to get more votes than others through chance
     """
-    ytids = list(metadataByYtid.keys())
-    
-    votes = getEqualPlayData()
-    if not votes:
-        return metadataByYtid[random.choice(ytids)]
-    elif votes :
-        voteIDs = [x.ytid for x in votes]
+    voteCount = betterVote.objects.count()
+    if voteCount == 0:
+        from random import randint
+        ytids = [x for x in metadataByYtid.keys()]
+        ytid = random.choice(ytids)
+        return metadataByYtid[ytid] 
+    #TODO: optimize this logic 
+    else:#elif voteCount > YtVid.objects.count():
+        #ytids = list(metadataByYtid.keys())
+        #TODO: rewrite to use redis cache for shared state.  cache['whatever'].get('')
+        ytids = YtVid.objects.all().values_list('ytid', flat=True)  
+        #votes = getEqualPlayData() 
+        votes = betterVote.objects.all().order_by('-ytVid__score', '-ytVid__wins', '-ytVid__votes')
+        voteIDs = [x.ytVid.ytid for x in votes]; 
+        #betterVote.objects.all()
+        #voteIDs = betterVote.objects.values_list('ytVid_id', flat=True) #named=True)
         unvotedIDs = set(ytids) - set(voteIDs)
         if unvotedIDs:
             return metadataByYtid[random.choice(list(unvotedIDs))]
         else:
-            weightedChoice = random.randint(0,int(len(votes)*.1))
-            ytid = votes[weightedChoice].ytid
+            weightedChoice = random.randint(0,int(len(voteIDs)*.1))
+            ytid = votes[weightedChoice].ytVid.ytid
             return metadataByYtid[ytid]
-    else:
-        raise Exception('missed outcome on if block')
     #rando = random.choice(ytids)
     #return rando
 #metadata should be an object and these functions should be an object too
@@ -151,63 +160,46 @@ def getAllMetadata(ytJsonDir: Path) -> dict:
         metadataByYtid[ytid] = metadata
     return metadataByYtid
 
-def getMetadataByYtid(metadataByYtid={}):
-    """
-    if passed metadata, just do an update for new info jsons, otherwise get all metadata
-    """
-    return 'derp'
-
 
 metadataByYtid = getAllMetadata(ytJsonDir)        
 
-def addVoteDataToMeta(metadata:dict) -> dict:
-    """
-        TODO: returns a new metadataByYtid dict with vote info added
-    """
-    eqpData = getEqualPlayData()
-    metadataYtidsSet = set(metadataByYtid.keys())
-    voteSet     = set([x.ytid for x in eqpData])
-    for metadata in metadataByYtid:
-        #if metadata['']
-
-        metadata['votes'] = 0
-        metadata['wins'] = 0
-
 def addMatchHistoryMetadata(metadata:dict, fullHist:bool = False) -> dict:
-    """adds matchHistory key to metadata if fullHist =True
-         - list of namedTuple with cols 'ytid opponentYtid outcome voteDatetime session postingIp' 
+    # """adds matchHistory key to metadata if fullHist =True
+    #      - list of namedTuple with cols 'ytid opponentYtid outcome voteDatetime session postingIp' 
        
-        if not fullHist, just does win ratio
+    #     if not fullHist, just does win ratio
 
-       also adds winRatio directy to metadata
-    """
-    columns  = 'ytid opponentYtid outcome voteDatetime session postingIp'
-    wins     = runSql("select winYtid, loseYtid, 'win', substr(voteDatetime,0,19), session, postingIp from bracket_vote where winYtid=:ytid limit 10;"
-                        ,{'ytid':metadata['id']}
-                        ,columns
-                )
-    losses   = runSql("select loseYtid, winYtid, 'loss', substr(voteDatetime,0,19), session, postingIp from bracket_vote where loseYtid=:ytid limit 10;"
-                        ,{'ytid':metadata['id']}
-                        ,columns
-                )
-    if losses:
-        matchHistory = (wins + losses)
-        winRatio = float(len(wins)) / len(matchHistory)
-    else:
-        matchHistory = wins
-        winRatio = float(len(wins))
+    #    also adds winRatio directy to metadata
+    # """
+    # columns  = 'ytid opponentYtid outcome voteDatetime session postingIp'
+    # wins     = runSql("select winYtid, loseYtid, 'win', substr(voteDatetime,0,19), session, postingIp from bracket_vote where winYtid=:ytid limit 10;"
+    #                     ,{'ytid':metadata['id']}
+    #                     ,columns
+    #             )
+    # losses   = runSql("select loseYtid, winYtid, 'loss', substr(voteDatetime,0,19), session, postingIp from bracket_vote where loseYtid=:ytid limit 10;"
+    #                     ,{'ytid':metadata['id']}
+    #                     ,columns
+    #             )
+    # if losses:
+    #     matchHistory = (wins + losses)
+    #     winRatio = float(len(wins)) / len(matchHistory)
+    # else:
+    #     matchHistory = wins
+    #     winRatio = float(len(wins))
     
-    metadata['wins']   = len(wins)
-    metadata['losses'] = len(losses)
+    # metadata['wins']   = len(wins)
+    # metadata['losses'] = len(losses)
 
-    winRatio  *= 100
-    winRatio   = str(int(winRatio)) + '%'
+    # winRatio  *= 100
+    # winRatio   = str(int(winRatio)) + '%'
 
-    metadata['winRatio']     = winRatio
+    # metadata['winRatio']     = winRatio
 
     if fullHist:
         print('in full hist mode')
-        matchHistory.sort(key = lambda x: [0])
+        #matchHistory.sort(key = lambda x: [0])
+        matchHistory = betterVote.objects.filter(ytVid__ytid=[x for x in metadata.keys()][0])
+        print(matchHistory)
         metadata['matchHistory'] = matchHistory
     return metadata
 
